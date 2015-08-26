@@ -29,6 +29,7 @@ public class Script
     // Begin Wizard Added Module Level Variables **
     private EpiDataView edvUD100;
     private EpiBaseAdapter oTrans_adapter;
+	private EpiDataView edvUD100A;
     // End Wizard Added Module Level Variables **
 
     // Add Custom Module Level Variables Here **
@@ -47,6 +48,8 @@ public class Script
         UD100_Column.ColumnChanging += UD100_BeforeFieldChange;
         this.oTrans_adapter = ((EpiBaseAdapter)(this.csm.TransAdaptersHT["oTrans_adapter"]));
         // this.oTrans_adapter.BeforeAdapterMethod += new BeforeAdapterMethod(this.oTrans_adapter_BeforeAdapterMethod);
+		this.edvUD100A = ((EpiDataView)(this.oTrans.EpiDataViews["UD100A"]));
+		this.edvUD100A.EpiViewNotification += new EpiViewNotification(this.edvUD100A_EpiViewNotification);
         // End Wizard Added Variable Initialization
 
         // Begin Wizard Added Custom Method Calls
@@ -80,6 +83,8 @@ public class Script
         UD100_Column.ColumnChanging -= UD100_BeforeFieldChange;
         //this.oTrans_adapter.BeforeAdapterMethod -= new BeforeAdapterMethod(this.oTrans_adapter_BeforeAdapterMethod);
         this.oTrans_adapter = null;
+		this.edvUD100A.EpiViewNotification -= new EpiViewNotification(this.edvUD100A_EpiViewNotification);
+		this.edvUD100A = null;
         // End Wizard Added Object Disposal
 
         // Begin Custom Code Disposal
@@ -114,9 +119,9 @@ public class Script
     }
 
     private void SetExtendedProperties() {
-        edvUD100.dataView.Table.Columns["Character03"].ExtendedProperties["ReadOnly"] = true;
-        edvUD100.dataView.Table.Columns["Character05"].ExtendedProperties["ReadOnly"] = true;
-        edvUD100.dataView.Table.Columns["Character06"].ExtendedProperties["ReadOnly"] = true;
+//        edvUD100.dataView.Table.Columns["Character03"].ExtendedProperties["ReadOnly"] = true;
+//        edvUD100.dataView.Table.Columns["Character05"].ExtendedProperties["ReadOnly"] = true;
+//        edvUD100.dataView.Table.Columns["Character06"].ExtendedProperties["ReadOnly"] = true;
         edvUD100.dataView.Table.Columns["Appr_CTNotes"].ExtendedProperties["ReadOnly"] = true;
         edvUD100.dataView.Table.Columns["Appr_MXNotes"].ExtendedProperties["ReadOnly"] = true;
         edvUD100.dataView.Table.Columns["Appr_TXNotes"].ExtendedProperties["ReadOnly"] = true;
@@ -185,6 +190,7 @@ public class Script
     }
 
     private void UD100_BeforeFieldChange(object sender, DataColumnChangeEventArgs args) {
+oTrans.PushStatusText("UD100_BeforeFieldChange", false);
         // ** Argument Properties and Uses **
         // args.Row["FieldName"]
         // args.Column, args.ProposedValue, args.Row
@@ -204,9 +210,11 @@ public class Script
                     args.ProposedValue = true;
                 break;
         }
+oTrans.PushStatusText("UD100_BeforeFieldChange end", false);
     }
 
     private void UD100_AfterFieldChange(object sender, DataColumnChangeEventArgs args) {
+oTrans.PushStatusText("UD100_AfterFieldChange", false);
         // ** Argument Properties and Uses **
         // args.Row["FieldName"]
         // args.Column, args.ProposedValue, args.Row
@@ -249,7 +257,7 @@ public class Script
 			case "Tasks_SubmitBOOL":
 			case "Tasks_GerberReadyBool":
 			case "Tasks_GerberReleaseBool":
-			case "SCD_ENG_YN":
+			case "SCD_ENG_YN": 
                 SetCheckBoxNotes(args);
                 break;
             case "CertificationAppCheckbox":
@@ -261,20 +269,25 @@ public class Script
             case "QualityAppCheckbox":
 			case "SCM_AppCheckbox":
 			case "SCM_2_AppCheckbox":
-			
+oTrans.PushStatusText("SCM_2_AppCheckbox", false);
 			    if (Convert.ToBoolean(args.ProposedValue) != IsAcknowledged(args)) {
+oTrans.PushStatusText("SCM_2_AppCheckbox 1", false);
                     args.Row[args.Column.ColumnName] = IsAcknowledged(args);
+oTrans.PushStatusText("SCM_2_AppCheckbox 2", false);
                     args.ProposedValue = args.Row[args.Column.ColumnName];
                 }
+oTrans.PushStatusText("SCM_2_AppCheckbox 3", false);
                 SetCheckBoxNotes(args);
                 break;
             case "Character02":
                 AddTeamEmailsToSelectedUsers();
                 break;
         }
+oTrans.PushStatusText("UD100_AfterFieldChange end", false);
     }
 
     private void AddTeamEmailsToSelectedUsers() {
+oTrans.PushStatusText("AddTeamEmailsToSelectedUsers", false);
         string Team = edvUD100.dataView[edvUD100.Row]["Character02"].ToString();
         string TeamID = string.Empty;
         switch (Team) {
@@ -338,9 +351,11 @@ public class Script
                 catUsers += user + "~";
 
         edvUD100.dataView[edvUD100.Row]["Character04"] = catUsers;
+oTrans.PushStatusText("AddTeamEmailsToSelectedUsers END", false);
     }
 
     private bool IsUserECRAdmin(string maybeAdminID) {
+oTrans.PushStatusText("IsUserECRAdmin", false);
         DataTable userFileRows = GetUserFileRows();
 
 	    //foreach (DataColumn dataColumn in userFileRows.Columns) {
@@ -353,16 +368,19 @@ public class Script
             if (userID == maybeAdminID && groupList.Contains("ECR1"))
                 return true;
         }
+oTrans.PushStatusText("IsUserECRAdmin END", false);
         return false;
     }
 
     private void edvUD100_EpiViewNotification(EpiDataView view, EpiNotifyArgs args) {
+oTrans.PushStatusText("edvUD100_EpiViewNotification", false);
         // ** Argument Properties and Uses **
         // view.dataView[args.Row]["FieldName"]
         // args.Row, args.Column, args.Sender, args.NotifyType
         // NotifyType.Initialize, NotifyType.AddRow, NotifyType.DeleteRow, NotifyType.InitLastView, NotifyType.InitAndResetTreeNodes				
         if ((args.Row > -1)) {
             //  Apply field security
+oTrans.PushStatusText("1", false);
             bool isStatusNull = string.IsNullOrEmpty(view.dataView[view.Row]["ShortChar02"].ToString());
             string userID = ((Session)oTrans.Session).UserID;
             bool isUserAdmin = IsUserECRAdmin(userID);
@@ -377,6 +395,7 @@ public class Script
                 //EpiMessageBox.Show("Opening NO Fields");
                 OpenAllFields(false);
             //  User grid
+oTrans.PushStatusText("2", false);
             if (eugAllUsers.Rows.Count < 1) {
                 DynamicQuery dq = new DynamicQuery(((Session)oTrans.Session).ConnectionPool);
                 DataSet ds = dq.ExecuteByID("CIC68322-UserLookup");
@@ -394,6 +413,92 @@ public class Script
                     selUsers.Add(s);
 
             eugSelectedUsers.DataSource = selUsers;
+
+//WHERE USED
+			DataTable whereused = new DataTable();
+			whereused.Columns.Add("Company", typeof(string));
+			whereused.Columns.Add("PartNum", typeof(string));
+			if((string)view.dataView[args.Row]["Character06"] != string.Empty)
+			{
+				foreach(string lines in ((string)view.dataView[args.Row]["Character06"]).Split(new string[]{Environment.NewLine}, StringSplitOptions.None))
+				{
+					string[] columns = lines.Split(new string[]{" - "}, StringSplitOptions.None);
+					DataRow r = whereused.NewRow();
+					if(columns.Length < 2){
+						r["Company"] = string.Empty;
+						r["PartNum"] = columns[0].Trim();
+					}
+					else{
+						r["Company"] = columns[0].Trim();
+						r["PartNum"] = columns[1].Trim();
+					}
+					whereused.Rows.Add(r);
+				}
+			}
+			epiUltraGridC1_WhereUsed.DataSource = whereused;
+
+//JOBS
+			DataTable jobs = new DataTable();
+			jobs.Columns.Add("Company", typeof(string));
+			jobs.Columns.Add("JobNum", typeof(string));
+			jobs.Columns.Add("StartDate", typeof(DateTime));
+			jobs.Columns.Add("Qty", typeof(int));
+			if((string)view.dataView[args.Row]["Character03"]!=string.Empty)
+			{
+				foreach(string lines in ((string)view.dataView[args.Row]["Character03"]).Split(new string[]{Environment.NewLine}, StringSplitOptions.None))
+				{
+					string[] columns = lines.Split(new string[]{" - "}, StringSplitOptions.None);
+					DataRow r = jobs.NewRow();
+					if(columns.Length < 4){
+						r["Company"] = string.Empty;
+						r["JobNum"] = columns[0].Trim();
+						r["StartDate"] = Convert.ToDateTime(columns[1].Trim());
+						r["Qty"] = Convert.ToInt32(columns[2].Trim());
+					}
+					else{
+						r["Company"] = columns[0].Trim();
+						r["JobNum"] = columns[1].Trim();
+						r["StartDate"] = Convert.ToDateTime(columns[2].Trim());
+						r["Qty"] = Convert.ToInt32(columns[3].Trim());
+					}
+					jobs.Rows.Add(r);
+				}
+			}
+			epiUltraGridC1_AffectedWorkorders.DataSource = jobs;
+
+//Disposition
+			DataTable disposition = new DataTable();
+			disposition.Columns.Add("Company", typeof(string));
+			disposition.Columns.Add("PartNum", typeof(string));
+			disposition.Columns.Add("Warehouse", typeof(string));
+			disposition.Columns.Add("On Hand Qty", typeof(decimal));
+			disposition.Columns.Add("Plant", typeof(string));
+
+oTrans.PushStatusText("5", false);
+			if((string)view.dataView[args.Row]["Character05"]!=string.Empty)
+			{
+				foreach(string lines in ((string)view.dataView[args.Row]["Character05"]).Split(new string[]{Environment.NewLine}, StringSplitOptions.None))
+				{
+					string[] columns = lines.Split(new string[]{" - "}, StringSplitOptions.None);
+					DataRow r = disposition.NewRow();
+					if(columns.Length < 5){
+						r["Company"] = string.Empty;
+						r["PartNum"] = columns[0].Trim();
+						r["warehouse"] = columns[1].Trim();
+						r["On Hand Qty"] = Convert.ToDecimal(columns[2].Trim());
+						r["Plant"] = columns[3].Trim();
+					}else{
+						r["Company"] = columns[0].Trim();
+						r["PartNum"] = columns[1].Trim();
+						r["warehouse"] = columns[2].Trim();
+						r["On Hand Qty"] = Convert.ToDecimal(columns[3].Trim());
+						r["Plant"] = columns[4].Trim();
+					}
+					disposition.Rows.Add(r);
+				}
+			}
+			epiUltraGridC1_DispositionInfo.DataSource = disposition;
+
         }
 
         if ((args.Row < 0)) {
@@ -401,9 +506,11 @@ public class Script
             eugSelectedUsers.DataSource = selUsers;
             eugAllUsers.DataSource = null;
         }
+oTrans.PushStatusText("edvUD100_EpiViewNotification END", false);
     }
 
     private void OpenSomeFields() {
+oTrans.PushStatusText("OpenSomeFields", false);
         bool isProtected = true;
         bool isEnabled = true;
         //bool IsStatusNull = !Protected;
@@ -442,9 +549,11 @@ public class Script
         btnPartNumber.Enabled = isProtected;
         //txtPartDesc.Enabled = isProtected;
         csm.GetNativeControlReference("9ba33a90-56ec-4084-ae5d-f1f45a050f92").Enabled = isProtected;
+oTrans.PushStatusText("OpenSomeFields END", false);
     }
 
     private void OpenAllFields(bool IsStatusNull) {
+oTrans.PushStatusText("OpenAllFields", false);
         bool Protected = !IsStatusNull;
         // ShortChar## are #*%!ing stupid and need ot use the native controll to do this.  
         csm.GetNativeControlReference("c8ce8aa7-2d99-4e26-b62b-b87dab0aa08f").Enabled = !Protected; //cmdStatus
@@ -504,6 +613,7 @@ public class Script
         chkBOMRequired.Enabled = IsStatusNull;
         csm.GetNativeControlReference("9ba33a90-56ec-4084-ae5d-f1f45a050f92").Enabled = IsStatusNull;
         //UD100Form.MainToolManager.Tools["EpiAddNewnewChild"].SharedProps.Enabled = IsStatusNull;
+oTrans.PushStatusText("OpenAllFields END", false);
     }
 
     #region UI Event Handlers
@@ -579,7 +689,8 @@ public class Script
         edvUD100.dataView[edvUD100.Row]["Character04"] = catUsers;
         eugSelectedUsers.DataSource = selUsers;
     }
-
+	private DataView affectedjobs;
+	private DataTable dtaffectedjobs;
     private void btnRollup_Click(object sender, EventArgs args) {
         // Clear old values
         edvUD100.dataView[edvUD100.Row]["Character03"] = "";
@@ -587,50 +698,162 @@ public class Script
         edvUD100.dataView[edvUD100.Row]["Character06"] = "";
 
         oTrans.PushStatusText("Gathering part where used...", true);
-        List<string> whereUsed = FindPartUsage();
+        newFindPartUsage();
 
         //  Roll up WHERE USED
+		oTrans.PushStatusText("Roll Up Where Used", false);
         BOReader boReader = new BOReader(((Session)oTrans.Session).ConnectionPool);
         string fieldContents = string.Empty;
-        foreach (string s in whereUsed) {
-            DataSet partDataSet = boReader.GetRows("Part", String.Format("PartNum='{0}'", s), "OnHoldReasonCode");
-            string onHold = partDataSet.Tables[0].Rows[0][0].ToString();
+		foreach(DataRow t in whereused.Rows)
+		{
+			fieldContents += string.Format("{0} - {1}{2}", (string)t["Company"], (string)t["PartNum"], Environment.NewLine);
+		}
+        edvUD100.dataView[edvUD100.Row]["Character06"] = fieldContents;
+        DynamicQueryAdapter dq1 = new DynamicQueryAdapter(oTrans);
+		dq1.BOConnect();
+        dq1.GetByID("CIC68322-PartSearch");
+		Epicor.Mfg.BO.QueryExecutionDataSet ds1 = dq1.GetQueryExecutionParameters(dq1.QueryDesignData);
+        oTrans.PushStatusText("Gathering part data...1", true);
+		DataRow r = ds1.Tables["ExecutionParameter"].NewRow();
+		r["ParameterName"] = "PartNum";
+		r["ParameterValue"] = "";
+		r["ValueType"] = "string";
+		r["IsEmpty"] = false;
+		r["RowIdent"] = string.Empty;
+		r["RowMod"] = "A";
+		ds1.Tables["ExecutionParameter"].Rows.Add(r);
+        foreach (DataRow s in whereused.Rows) {
+			oTrans.PushStatusText((string)s["PartNum"], false);
+			ds1.Tables["ExecutionParameter"].Rows[0]["ParameterValue"] = (string)s["PartNum"];
+			string resultFieldList = string.Empty;
+			int topNRecords = 0;
+			bool hasMoreRecords;
+			dq1.ExecuteByIDParametrized("CIC68322-PartSearch", ds1, "", topNRecords, out hasMoreRecords);
+			DataSet QueryResults = dq1.QueryResults;
+	        Part part = new Part(((Session)oTrans.Session).ConnectionPool);
+			string onHold = string.Empty;
+	        foreach (DataRow row in QueryResults.Tables["Results"].Rows) {
+            	onHold = row[0].ToString();
+			}
             if (!String.IsNullOrEmpty(onHold))
                 fieldContents += string.Format("{0} - {1}{2}", s, onHold, Environment.NewLine);
             else
                 fieldContents += string.Format("{0}{1}", s, Environment.NewLine);
         }
-        edvUD100.dataView[edvUD100.Row]["Character06"] = String.Join(Environment.NewLine, whereUsed.ToArray());
-
+		dq1.Dispose();
+		dq1 = null;
+//        edvUD100.dataView[edvUD100.Row]["Character06"] = String.Join(Environment.NewLine, whereUsed.ToArray());
+		oTrans.PushStatusText("Roll up Affected WOs", false);
         //  Roll up AFFECTED WOs
         oTrans.PushStatusText("Finding affected WOs...", true);
         affectedWOs = new List<string>();
-
-        foreach (String s in whereUsed) {
-            DataSet ds = boReader.GetRows("JobEntry", String.Format("PartNum = '{0}' AND JobClosed = FALSE AND JobFirm = TRUE", s), "JobNum,StartDate,ProdQty");
-            foreach (DataRow dr in ds.Tables[0].Rows)
-                affectedWOs.Add(String.Format("{0} - {1} - {2}", dr[0], Convert.ToDateTime(dr[1]).ToString("dd-MMM-yy"), Convert.ToInt32(dr[2]).ToString("D3")));
+		string whereClause = string.Empty;
+		if(affectedjobs == null){ // only run the query once.
+			DynamicQueryAdapter dq = new DynamicQueryAdapter(this.oTrans);
+			dq.BOConnect();
+			string QueryID = "CIC68322-AffectedJobs";
+			dq.ExecuteByID(QueryID);
+			affectedjobs = new DataView(dq.QueryResults.Tables[0]);
+			dq.Dispose();
+			dq = null;
+		}
+        oTrans.PushStatusText("Finding JobHead.PartNum...", true);
+		dtaffectedjobs = new DataTable();
+		dtaffectedjobs.Columns.Add("Company", typeof(string));
+		dtaffectedjobs.Columns.Add("JobNum", typeof(string));
+		dtaffectedjobs.Columns.Add("StartDate", typeof(DateTime));
+		dtaffectedjobs.Columns.Add("Qty", typeof(int));
+        foreach (DataRow row in whereused.Rows) {
+			string s = (string)row["PartNum"];
+			whereClause = string.Format("JobHead.PartNum='{0}'", s);
+			affectedjobs.RowFilter = whereClause;
+            foreach (DataRowView dr in affectedjobs){
+				DataRow newrow = dtaffectedjobs.NewRow();
+        oTrans.PushStatusText(string.Format("Finding JobHead.PartNum...1"), true);
+				newrow["Company"]= (string)dr[0];
+        oTrans.PushStatusText(string.Format("Finding JobHead.PartNum...2"), true);
+				newrow["JobNum"] = (string)dr[1];
+        oTrans.PushStatusText(string.Format("Finding JobHead.PartNum...3"), true);
+				try{
+				newrow["StartDate"] = Convert.ToDateTime(dr[2]);
+				}
+				catch{}
+        oTrans.PushStatusText(string.Format("Finding JobHead.PartNum...4"), true);
+				newrow["Qty"] = Convert.ToInt32((decimal)dr[3]);
+				dtaffectedjobs.Rows.Add(newrow);
+//                affectedWOs.Add(String.Format("{0} - {1} - {2} - {3}", dr[0], dr[1], Convert.ToDateTime(dr[2]).ToString("dd-MMM-yy"), Convert.ToInt32(dr[3]).ToString("D3")));
+			}
         }
 
+		epiUltraGridC1_AffectedWorkorders.DataSource = dtaffectedjobs;
+
         fieldContents = "";
-        foreach (String s in affectedWOs)
-            fieldContents += s + Environment.NewLine;
+		foreach(DataRow t in dtaffectedjobs.Rows)
+		{
+			fieldContents += string.Format("{0} - {1} - {2} - {3}{4}", (string)t["Company"], (string)t["JobNum"], (DateTime)t["StartDate"], (int)t["Qty"], Environment.NewLine);
+		}
 
         edvUD100.dataView[edvUD100.Row]["Character03"] = fieldContents;
 
+        oTrans.PushStatusText("Finding Inventory...", true);
         // Find inventory
+		//CIC68322-PartWhseSearch_ECR
+        DynamicQueryAdapter dq2 = new DynamicQueryAdapter(oTrans);
+		dq2.BOConnect();
+        dq2.GetByID("CIC68322-PartWhseSearch_ECR");
+		Epicor.Mfg.BO.QueryExecutionDataSet ds2 = dq2.GetQueryExecutionParameters(dq2.QueryDesignData);
+        oTrans.PushStatusText("Gathering part data...1", true);
+		DataRow r2 = ds2.Tables["ExecutionParameter"].NewRow();
+		r2["ParameterName"] = "PartNum";
+		r2["ParameterValue"] = "";
+		r2["ValueType"] = "string";
+		r2["IsEmpty"] = false;
+		r2["RowIdent"] = string.Empty;
+		r2["RowMod"] = "A";
+		ds2.Tables["ExecutionParameter"].Rows.Add(r2);
+
+
+
+
         oTrans.PushStatusText("Finding usage...", true);
-        disposition = new List<string>();
-        foreach (String s in whereUsed) {
-            DataSet ds = boReader.GetRows("PartWhseSearch", String.Format("PartNum = '{0}'", s), "OnHandQty,WarehouseCode,Plant");
-            foreach (DataRow row in ds.Tables[0].Rows)
-                if (Convert.ToDecimal(row[0]) != 0)
-                    disposition.Add(String.Format("{0} - {1} - {2} - {3}", s, row[1], row[0], row[2]));
+
+		DataTable dispositioninfo = new DataTable();
+		dispositioninfo.Columns.Add("Company", typeof(string));
+		dispositioninfo.Columns.Add("PartNum", typeof(string));
+		dispositioninfo.Columns.Add("Warehouse", typeof(string));
+		dispositioninfo.Columns.Add("On Hand Qty", typeof(decimal));
+		dispositioninfo.Columns.Add("Plant", typeof(string));
+        foreach (DataRow partrow in whereused.Rows) {
+			ds2.Tables["ExecutionParameter"].Rows[0]["ParameterValue"] = (string)partrow["PartNum"];
+			int topNRecords = 0;
+			bool hasMoreRecords;
+			dq2.ExecuteByIDParametrized("CIC68322-PartWhseSearch_ECR", ds2, "", topNRecords, out hasMoreRecords);
+	        foreach (DataRow row in dq2.QueryResults.Tables["Results"].Rows) {
+	            if (Convert.ToDecimal(row[3]) != 0)
+				{
+					DataRow newrow = dispositioninfo.NewRow();
+					newrow["Company"] = (string)row[0];
+					newrow["PartNum"] = (string)row[1];
+					newrow["Warehouse"] = (string)row[2];
+					newrow["On Hand Qty"] = Convert.ToDecimal(row[3]);
+					newrow["Plant"] = row[4].ToString();
+					dispositioninfo.Rows.Add(newrow);
+				}
+			}
         }
 
+		DataView dv = new DataView(dispositioninfo);
+		dv.Sort = "Company, PartNum, Warehouse, On Hand Qty, Plant";
+		dispositioninfo = dv.ToTable(true, "Company", "PartNum", "Warehouse", "On Hand Qty", "Plant");
+
+		epiUltraGridC1_DispositionInfo.DataSource = dispositioninfo;
+		dq2.Dispose();
+
         fieldContents = "";
-        foreach (String s in disposition)
-            fieldContents += s + Environment.NewLine;
+		foreach(DataRow t in dispositioninfo.Rows)
+		{
+			fieldContents += string.Format("{0} - {1} - {2} - {3} - {4}{5}", (string)t["Company"], (string)t["PartNum"], (string)t["Warehouse"], (decimal)t["On Hand Qty"], (string)t["Plant"], Environment.NewLine);
+		}
 
         edvUD100.dataView[edvUD100.Row]["Character05"] = fieldContents;
 
@@ -640,6 +863,7 @@ public class Script
 
     #region Email functionality
     private void SendStatusAlerts(string status, string ECRNum) {
+oTrans.PushStatusText("SendStatusAlerts", false);
         string subject = string.Format("ECR: {0} Status Changed to {1}", ECRNum, status);
         string body = string.Format("ECR: {0} Status Changed to {1}", ECRNum, status);
         Stopwatch stopwatch = Stopwatch.StartNew();
@@ -658,7 +882,8 @@ public class Script
                 break;
             case "Open": {
                 oTrans.PushDisposableStatusText("Emailing team lead...", true);
-				List<string> addresses = GetTeamLeadEmailAddresses();
+				//List<string> addresses = GetTeamLeadEmailAddresses();
+				 List<string> addresses = GetSelectedUserEmailAddresses();
                 SendEmail(addresses, subject, body);
             }
                 break;
@@ -674,6 +899,7 @@ public class Script
                 break;
         }
         SayElapsedTime(stopwatch.Elapsed);
+oTrans.PushStatusText("SendStatusAlerts end", false);
     }
 
     private DataTable GetUserFileRows() {
@@ -862,24 +1088,37 @@ public class Script
 
     #region Checkbox Functions
     private bool IsAcknowledged(DataColumnChangeEventArgs args) {
+		oTrans.PushStatusText("IsAcknowledged", false);
         //  Cross reference ack field to app fields
         Dictionary<string, string> FieldRef = new Dictionary<string, string>();
+		oTrans.PushStatusText("IsAcknowledged 1", false);
         FieldRef.Add("CertificationAppCheckbox", "CertificationAckCheckbox");
+		oTrans.PushStatusText("IsAcknowledged 2", false);
         FieldRef.Add("ContractsAppCheckbox", "ContractsAckCheckbox");
+		oTrans.PushStatusText("IsAcknowledged 3", false);
         FieldRef.Add("DesignEngAppCheckbox", "DesignEngAckCheckbox");
+		oTrans.PushStatusText("IsAcknowledged 4", false);
         FieldRef.Add("MangEngAppCheckbox", "MangEngAckCheckbox");
+		oTrans.PushStatusText("IsAcknowledged 5", false);
         FieldRef.Add("ProductionControlAppCheckbox", "ProductionControlAckCheckbox");
+		oTrans.PushStatusText("IsAcknowledged 6", false);
         FieldRef.Add("QualityAppCheckbox", "QualityAckCheckbox");
+		oTrans.PushStatusText("IsAcknowledged 7", false);
         FieldRef.Add("AS9100_AppCheckBox", "AS9100_AckCheckBox"); //added by Scott
+		oTrans.PushStatusText("IsAcknowledged 8", false);
         FieldRef.Add("SCM_AppCheckbox", "SCM_AckCheckbox"); //added by Scott
+		oTrans.PushStatusText("IsAcknowledged 9", false);
 		FieldRef.Add("SCM_2_AppCheckbox", "SCM_2_AckCheckbox"); //added by Scott
+		oTrans.PushStatusText("IsAcknowledged 10", false);
 		
-
-        bool Ack = Convert.ToBoolean(edvUD100.dataView[edvUD100.Row][FieldRef[args.Column.ColumnName]]);
+        //bool Ack = Convert.ToBoolean(edvUD100.dataView[edvUD100.Row][FieldRef[args.Column.ColumnName]]);
+        bool Ack = Convert.ToBoolean(args.ProposedValue);
+		oTrans.PushStatusText("IsAcknowledged END", false);
         return Ack;
     }
 
     private void SetCheckBoxNotes(DataColumnChangeEventArgs args) {
+oTrans.PushStatusText("SetCheckBoxNotes", false);
         //  Store relationship between check boxes and note fields
         Dictionary<string, string> FieldRef = new Dictionary<string, string>();
         FieldRef.Add("CertificationAckCheckbox", "CertificationAckNotes");
@@ -932,9 +1171,10 @@ public class Script
             edvUD100.dataView[edvUD100.Row][FieldRef[ColumnName]] = string.Format("{0}-{1}-{2} ", ((Session)oTrans.Session).UserID, DateTime.Now.ToShortTimeString(), DateTime.Today.ToString("dd-MMM-yy"));
         else if (!ProposedValue)
             edvUD100.dataView[edvUD100.Row][FieldRef[ColumnName]] = "";
+oTrans.PushStatusText("SetCheckBoxNotes END", false);
     }
     #endregion
-
+	private DataTable whereused;
     private List<string> FindPartUsage() {
         // Find all parts containing ECR parts.
         oTrans.PushStatusText("Gathering part where used...", true);
@@ -964,6 +1204,83 @@ public class Script
         return whereUsed;
     }
 
+    private void newFindPartUsage() {
+		whereused = new DataTable();
+		whereused.Columns.Add("Company", typeof(string));
+		whereused.Columns.Add("PartNum", typeof(string));
+        // Find all parts containing ECR parts.
+        oTrans.PushStatusText("Gathering part where used...", true);
+        List<string> whereUsed = new List<string>();
+        DynamicQueryAdapter dq = new DynamicQueryAdapter(oTrans);
+		dq.BOConnect();
+        dq.GetByID("CIC68322-ECRRollupIndividual");
+		Epicor.Mfg.BO.QueryExecutionDataSet ds = dq.GetQueryExecutionParameters(dq.QueryDesignData);
+        oTrans.PushStatusText("Gathering part where used...1", true);
+		DataRow r = ds.Tables["ExecutionParameter"].NewRow();
+		r["ParameterName"] = "PartNum";
+		r["ParameterValue"] = string.Empty;
+		r["ValueType"] = "string";
+		r["IsEmpty"] = false;
+		r["RowIdent"] = string.Empty;
+		r["RowMod"] = "A";
+		ds.Tables["ExecutionParameter"].Rows.Add(r);
+		string resultFieldList = string.Empty;
+		int topNRecords = 0;
+		bool hasMoreRecords;
+
+        DynamicQueryAdapter partsearch = new DynamicQueryAdapter(oTrans);
+		partsearch.BOConnect();
+        partsearch.GetByID("CIC68322-PartSearch");
+		Epicor.Mfg.BO.QueryExecutionDataSet ds_partsearch = partsearch.GetQueryExecutionParameters(partsearch.QueryDesignData);
+        oTrans.PushStatusText("Gathering part data...1", true);
+		DataRow r_partsearch = ds_partsearch.Tables["ExecutionParameter"].NewRow();
+		r_partsearch["ParameterName"] = "PartNum";
+		r_partsearch["ParameterValue"] = "";
+		r_partsearch["ValueType"] = "string";
+		r_partsearch["IsEmpty"] = false;
+		r_partsearch["RowIdent"] = string.Empty;
+		r_partsearch["RowMod"] = "A";
+		ds_partsearch.Tables["ExecutionParameter"].Rows.Add(r_partsearch);
+
+		foreach(DataRowView DRV in edvUD100A.dataView)
+		{
+			ds_partsearch.Tables["ExecutionParameter"].Rows[0]["ParameterValue"] = (string)DRV["ChildKey1"];
+			partsearch.ExecuteByIDParametrized("CIC68322-PartSearch", ds_partsearch, "", topNRecords, out hasMoreRecords);
+			foreach(DataRow row in partsearch.QueryResults.Tables["Results"].Rows){
+						DataRow childnewrow = whereused.NewRow();
+						childnewrow["Company"] = (string)row[3];
+						childnewrow["PartNum"] = (string)row[2];
+						whereused.Rows.Add(childnewrow);
+			}
+
+
+			ds.Tables["ExecutionParameter"].Rows[0]["ParameterValue"] = (string)DRV["ChildKey1"];
+			dq.ExecuteByIDParametrized("CIC68322-ECRRollupIndividual", ds, "", topNRecords, out hasMoreRecords);
+	        oTrans.PushStatusText("Gathering part where used...2", true);
+			DataSet QueryResults = dq.QueryResults;
+	        oTrans.PushStatusText(string.Format("Gathering part where used...3({0})",QueryResults.Tables["Results"].Rows.Count), true);
+	        foreach (DataRow row in QueryResults.Tables["Results"].Rows) {
+	            for (int i = 0; i <= 5; i++) {
+					if(!String.IsNullOrEmpty(row[i].ToString()) && !String.IsNullOrEmpty(row[5 + i].ToString())){
+						DataRow childnewrow = whereused.NewRow();
+						childnewrow["Company"] = (string)row[5+i];
+						childnewrow["PartNum"] = (string)row[i];
+						whereused.Rows.Add(childnewrow);
+					}
+	            }
+	        }
+		}
+		oTrans.PushStatusText("Getting distinct and ordering...", false);
+		DataView dv = new DataView(whereused);
+		dv.Sort = "Company, PartNum";
+		whereused = dv.ToTable(true, "Company", "PartNum");
+		epiUltraGridC1_WhereUsed.DataSource = whereused;
+		dq.Dispose();
+		dq = null;
+		partsearch.Dispose();
+		partsearch = null;
+    }
+
     private List<string> RemoveDuplicates(List<string> lines) {
         Dictionary<string, bool> distinct = new Dictionary<string, bool>();
         foreach (string line in lines)
@@ -974,4 +1291,18 @@ public class Script
     private void Debug(string s) {
         MessageBox.Show(s);
     }
+
+	private void edvUD100A_EpiViewNotification(EpiDataView view, EpiNotifyArgs args)
+	{
+		// ** Argument Properties and Uses **
+		// view.dataView[args.Row]["FieldName"]
+		// args.Row, args.Column, args.Sender, args.NotifyType
+		// NotifyType.Initialize, NotifyType.AddRow, NotifyType.DeleteRow, NotifyType.InitLastView, NotifyType.InitAndResetTreeNodes
+		if ((args.NotifyType == EpiTransaction.NotifyType.AddRow))
+		{
+			if ((args.Row > -1))
+			{
+			}
+		}
+	}
 }

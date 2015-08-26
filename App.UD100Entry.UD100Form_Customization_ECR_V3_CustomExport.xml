@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
 <CustomizationDS xmlns="http://tempuri.org/XMLSchema.xsd">
   <xs:schema id="CustomizationDS" targetNamespace="http://tempuri.org/XMLSchema.xsd" xmlns:mstns="http://tempuri.org/XMLSchema.xsd" xmlns="http://tempuri.org/XMLSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
-    <xs:element name="CustomizationDS" msdata:IsDataSet="true" msdata:Locale="" msprop:Key2="App.UD100Entry.UD100Form" msprop:CGCCode="" msprop:CommentText="[spare: 8/27/2013 11:36:24 AM]&#xA;[epicorapm: 8/30/2013 1:57:31 PM]&#xA;Added Approved Plant grid and fixed lookup errors.&#xA;[epicorapm: 12/12/2013 4:43:34 PM]&#xA;Added Ack/App Grid&#xA;[epicorapm: 12/31/2013 1:23:30 PM]&#xA;Copy to 'default'&#xA;[epicorapm: 2/17/2014 4:11:19 PM]&#xA;Added Email alerts.&#xA;[epicorapm: 2/18/2014 11:58:39 AM]&#xA;&#xA;Rebuild Task Form&#xA;[epicorapm: 2/18/2014 1:48:41 PM]&#xA;&#xA;Convert to dedicated fields&#xA;[epicorapm: 2/19/2014 9:23:18 AM]&#xA;Add timestamps to checkbox notes&#xA;[epicorapm: 2/19/2014 2:19:53 PM]&#xA;[epicorapm: 2/19/2014 2:22:29 PM]&#xA;Make notes readonly.&#xA;[epicorapm: 2/19/2014 2:33:25 PM]&#xA;Add new Ack/App Notes fields.&#xA;[epicorapm: 2/20/2014 8:35:07 AM]&#xA;[epicorapm: 2/20/2014 8:36:34 AM]&#xA;[epicorapm: 2/20/2014 10:49:26 AM]&#xA;[Spare] Setup NOTES&#xA;&#xA;[spare: 2/25/2014 10:43:28 AM]&#xA; &#xA;&#xA;[spare: 3/17/2014 10:30:39 AM]&#xA;&#xA;&#xA;&#xA;[spare: 4/28/2014 11:05:05 AM]&#xA;Copied From TEST DB.&#xA;&#xA;[spare: 6/17/2014 1:34:06 PM]&#xA;&#xA;Added Poland Check Box / and Notes;&#xA;[spare: 9/17/2014 10:26:18 AM]&#xA;&#xA;NO VOID&#xA;&#xA;[spare: 12/12/2014 3:34:49 PM]" msprop:Key3="" msprop:Key1="ECR_V3" msprop:Description="ECR V3" msprop:TypeCode="Customization" msprop:ProductID="EP" msprop:Company="CIC68322" msprop:BuildVersion="9.05.702A">
+    <xs:element name="CustomizationDS" msdata:IsDataSet="true" msdata:Locale="" msprop:Key2="App.UD100Entry.UD100Form" msprop:CGCCode="" msprop:CommentText="" msprop:Key3="" msprop:Key1="ECR_V3" msprop:Description="" msprop:TypeCode="Customization" msprop:ProductID="EP" msprop:Company="CIC68322" msprop:BuildVersion="9.05.702A">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="Controls">
@@ -128,42 +128,6 @@
     <FormsID>UD100Form</FormsID>
     <ControlName>epiLabelC6</ControlName>
     <Key>3fe04bd8-60f8-4c24-90fc-f1eed4a6f51f</Key>
-    <ParentControlKey>810241f6-e91e-4112-be62-f77982737f3c</ParentControlKey>
-    <ControlType>Epicor.Mfg.UI.FrameWork.EpiLabel</ControlType>
-    <Company />
-    <Plant />
-    <DcdUserId />
-    <GroupID />
-    <ControlsID />
-  </Controls>
-  <Controls>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC7</ControlName>
-    <Key>3accbb2f-731f-444d-a51e-f71030a585d1</Key>
-    <ParentControlKey>810241f6-e91e-4112-be62-f77982737f3c</ParentControlKey>
-    <ControlType>Epicor.Mfg.UI.FrameWork.EpiLabel</ControlType>
-    <Company />
-    <Plant />
-    <DcdUserId />
-    <GroupID />
-    <ControlsID />
-  </Controls>
-  <Controls>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC7</ControlName>
-    <Key>02cd5f09-9d9c-4c5b-98a5-0154887030e3</Key>
-    <ParentControlKey>810241f6-e91e-4112-be62-f77982737f3c</ParentControlKey>
-    <ControlType>Epicor.Mfg.UI.FrameWork.EpiTextBox</ControlType>
-    <Company />
-    <Plant />
-    <DcdUserId />
-    <GroupID />
-    <ControlsID />
-  </Controls>
-  <Controls>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC10</ControlName>
-    <Key>b3af526d-12f3-4d2a-abd7-26c24cdff3f3</Key>
     <ParentControlKey>810241f6-e91e-4112-be62-f77982737f3c</ParentControlKey>
     <ControlType>Epicor.Mfg.UI.FrameWork.EpiLabel</ControlType>
     <Company />
@@ -634,42 +598,6 @@
     <Key>aa01018f-fef8-482b-86a8-46a7218e5408</Key>
     <ParentControlKey>810241f6-e91e-4112-be62-f77982737f3c</ParentControlKey>
     <ControlType>Epicor.Mfg.UI.FrameWork.EpiButton</ControlType>
-    <Company />
-    <Plant />
-    <DcdUserId />
-    <GroupID />
-    <ControlsID />
-  </Controls>
-  <Controls>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC1</ControlName>
-    <Key>38bd102d-5180-4518-9d0d-3df1fd9b3012</Key>
-    <ParentControlKey>810241f6-e91e-4112-be62-f77982737f3c</ParentControlKey>
-    <ControlType>Epicor.Mfg.UI.FrameWork.EpiTextBox</ControlType>
-    <Company />
-    <Plant />
-    <DcdUserId />
-    <GroupID />
-    <ControlsID />
-  </Controls>
-  <Controls>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC8</ControlName>
-    <Key>1363085c-ba35-42d0-bbd7-18a3f68ea31d</Key>
-    <ParentControlKey>810241f6-e91e-4112-be62-f77982737f3c</ParentControlKey>
-    <ControlType>Epicor.Mfg.UI.FrameWork.EpiLabel</ControlType>
-    <Company />
-    <Plant />
-    <DcdUserId />
-    <GroupID />
-    <ControlsID />
-  </Controls>
-  <Controls>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC19</ControlName>
-    <Key>b34708ec-5daf-4aec-9951-d52b8742e832</Key>
-    <ParentControlKey>810241f6-e91e-4112-be62-f77982737f3c</ParentControlKey>
-    <ControlType>Epicor.Mfg.UI.FrameWork.EpiTextBox</ControlType>
     <Company />
     <Plant />
     <DcdUserId />
@@ -2740,6 +2668,42 @@
     <GroupID />
     <ControlsID />
   </Controls>
+  <Controls>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_WhereUsed</ControlName>
+    <Key>cb6062b3-4365-4428-8a8e-afb5d1ccdb31</Key>
+    <ParentControlKey>81f63481-ed59-4b8d-ad5c-d83041a9d62f</ParentControlKey>
+    <ControlType>Epicor.Mfg.UI.FrameWork.EpiUltraGrid</ControlType>
+    <Company />
+    <Plant />
+    <DcdUserId />
+    <GroupID />
+    <ControlsID />
+  </Controls>
+  <Controls>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_AffectedWorkorders</ControlName>
+    <Key>3f8f357a-b75e-40c9-b5f1-5daca8d2875d</Key>
+    <ParentControlKey>81f63481-ed59-4b8d-ad5c-d83041a9d62f</ParentControlKey>
+    <ControlType>Epicor.Mfg.UI.FrameWork.EpiUltraGrid</ControlType>
+    <Company />
+    <Plant />
+    <DcdUserId />
+    <GroupID />
+    <ControlsID />
+  </Controls>
+  <Controls>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_DispositionInfo</ControlName>
+    <Key>b40036dd-beae-472d-9b90-62a459bfd401</Key>
+    <ParentControlKey>81f63481-ed59-4b8d-ad5c-d83041a9d62f</ParentControlKey>
+    <ControlType>Epicor.Mfg.UI.FrameWork.EpiUltraGrid</ControlType>
+    <Company />
+    <Plant />
+    <DcdUserId />
+    <GroupID />
+    <ControlsID />
+  </Controls>
   <Properties>
     <FormsID>UD100Form</FormsID>
     <ControlName>btnKeyField</ControlName>
@@ -2817,7 +2781,7 @@
     <ControlName>groupBox1</ControlName>
     <Key>810241f6-e91e-4112-be62-f77982737f3c</Key>
     <PropertyName>Width</PropertyName>
-    <PropertyValue>1022</PropertyValue>
+    <PropertyValue>1320</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -2829,7 +2793,7 @@
     <ControlName>groupBox1</ControlName>
     <Key>810241f6-e91e-4112-be62-f77982737f3c</Key>
     <PropertyName>Height</PropertyName>
-    <PropertyValue>522</PropertyValue>
+    <PropertyValue>532</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -3556,6 +3520,7 @@ public class Script
     // Begin Wizard Added Module Level Variables **
     private EpiDataView edvUD100;
     private EpiBaseAdapter oTrans_adapter;
+	private EpiDataView edvUD100A;
     // End Wizard Added Module Level Variables **
 
     // Add Custom Module Level Variables Here **
@@ -3574,6 +3539,8 @@ public class Script
         UD100_Column.ColumnChanging += UD100_BeforeFieldChange;
         this.oTrans_adapter = ((EpiBaseAdapter)(this.csm.TransAdaptersHT["oTrans_adapter"]));
         // this.oTrans_adapter.BeforeAdapterMethod += new BeforeAdapterMethod(this.oTrans_adapter_BeforeAdapterMethod);
+		this.edvUD100A = ((EpiDataView)(this.oTrans.EpiDataViews["UD100A"]));
+		this.edvUD100A.EpiViewNotification += new EpiViewNotification(this.edvUD100A_EpiViewNotification);
         // End Wizard Added Variable Initialization
 
         // Begin Wizard Added Custom Method Calls
@@ -3607,6 +3574,8 @@ public class Script
         UD100_Column.ColumnChanging -= UD100_BeforeFieldChange;
         //this.oTrans_adapter.BeforeAdapterMethod -= new BeforeAdapterMethod(this.oTrans_adapter_BeforeAdapterMethod);
         this.oTrans_adapter = null;
+		this.edvUD100A.EpiViewNotification -= new EpiViewNotification(this.edvUD100A_EpiViewNotification);
+		this.edvUD100A = null;
         // End Wizard Added Object Disposal
 
         // Begin Custom Code Disposal
@@ -3641,9 +3610,9 @@ public class Script
     }
 
     private void SetExtendedProperties() {
-        edvUD100.dataView.Table.Columns["Character03"].ExtendedProperties["ReadOnly"] = true;
-        edvUD100.dataView.Table.Columns["Character05"].ExtendedProperties["ReadOnly"] = true;
-        edvUD100.dataView.Table.Columns["Character06"].ExtendedProperties["ReadOnly"] = true;
+//        edvUD100.dataView.Table.Columns["Character03"].ExtendedProperties["ReadOnly"] = true;
+//        edvUD100.dataView.Table.Columns["Character05"].ExtendedProperties["ReadOnly"] = true;
+//        edvUD100.dataView.Table.Columns["Character06"].ExtendedProperties["ReadOnly"] = true;
         edvUD100.dataView.Table.Columns["Appr_CTNotes"].ExtendedProperties["ReadOnly"] = true;
         edvUD100.dataView.Table.Columns["Appr_MXNotes"].ExtendedProperties["ReadOnly"] = true;
         edvUD100.dataView.Table.Columns["Appr_TXNotes"].ExtendedProperties["ReadOnly"] = true;
@@ -3712,6 +3681,7 @@ public class Script
     }
 
     private void UD100_BeforeFieldChange(object sender, DataColumnChangeEventArgs args) {
+oTrans.PushStatusText("UD100_BeforeFieldChange", false);
         // ** Argument Properties and Uses **
         // args.Row["FieldName"]
         // args.Column, args.ProposedValue, args.Row
@@ -3731,9 +3701,11 @@ public class Script
                     args.ProposedValue = true;
                 break;
         }
+oTrans.PushStatusText("UD100_BeforeFieldChange end", false);
     }
 
     private void UD100_AfterFieldChange(object sender, DataColumnChangeEventArgs args) {
+oTrans.PushStatusText("UD100_AfterFieldChange", false);
         // ** Argument Properties and Uses **
         // args.Row["FieldName"]
         // args.Column, args.ProposedValue, args.Row
@@ -3776,7 +3748,7 @@ public class Script
 			case "Tasks_SubmitBOOL":
 			case "Tasks_GerberReadyBool":
 			case "Tasks_GerberReleaseBool":
-			case "SCD_ENG_YN":
+			case "SCD_ENG_YN": 
                 SetCheckBoxNotes(args);
                 break;
             case "CertificationAppCheckbox":
@@ -3788,20 +3760,25 @@ public class Script
             case "QualityAppCheckbox":
 			case "SCM_AppCheckbox":
 			case "SCM_2_AppCheckbox":
-			
+oTrans.PushStatusText("SCM_2_AppCheckbox", false);
 			    if (Convert.ToBoolean(args.ProposedValue) != IsAcknowledged(args)) {
+oTrans.PushStatusText("SCM_2_AppCheckbox 1", false);
                     args.Row[args.Column.ColumnName] = IsAcknowledged(args);
+oTrans.PushStatusText("SCM_2_AppCheckbox 2", false);
                     args.ProposedValue = args.Row[args.Column.ColumnName];
                 }
+oTrans.PushStatusText("SCM_2_AppCheckbox 3", false);
                 SetCheckBoxNotes(args);
                 break;
             case "Character02":
                 AddTeamEmailsToSelectedUsers();
                 break;
         }
+oTrans.PushStatusText("UD100_AfterFieldChange end", false);
     }
 
     private void AddTeamEmailsToSelectedUsers() {
+oTrans.PushStatusText("AddTeamEmailsToSelectedUsers", false);
         string Team = edvUD100.dataView[edvUD100.Row]["Character02"].ToString();
         string TeamID = string.Empty;
         switch (Team) {
@@ -3865,9 +3842,11 @@ public class Script
                 catUsers += user + "~";
 
         edvUD100.dataView[edvUD100.Row]["Character04"] = catUsers;
+oTrans.PushStatusText("AddTeamEmailsToSelectedUsers END", false);
     }
 
     private bool IsUserECRAdmin(string maybeAdminID) {
+oTrans.PushStatusText("IsUserECRAdmin", false);
         DataTable userFileRows = GetUserFileRows();
 
 	    //foreach (DataColumn dataColumn in userFileRows.Columns) {
@@ -3880,16 +3859,19 @@ public class Script
             if (userID == maybeAdminID &amp;&amp; groupList.Contains("ECR1"))
                 return true;
         }
+oTrans.PushStatusText("IsUserECRAdmin END", false);
         return false;
     }
 
     private void edvUD100_EpiViewNotification(EpiDataView view, EpiNotifyArgs args) {
+oTrans.PushStatusText("edvUD100_EpiViewNotification", false);
         // ** Argument Properties and Uses **
         // view.dataView[args.Row]["FieldName"]
         // args.Row, args.Column, args.Sender, args.NotifyType
         // NotifyType.Initialize, NotifyType.AddRow, NotifyType.DeleteRow, NotifyType.InitLastView, NotifyType.InitAndResetTreeNodes				
         if ((args.Row &gt; -1)) {
             //  Apply field security
+oTrans.PushStatusText("1", false);
             bool isStatusNull = string.IsNullOrEmpty(view.dataView[view.Row]["ShortChar02"].ToString());
             string userID = ((Session)oTrans.Session).UserID;
             bool isUserAdmin = IsUserECRAdmin(userID);
@@ -3904,6 +3886,7 @@ public class Script
                 //EpiMessageBox.Show("Opening NO Fields");
                 OpenAllFields(false);
             //  User grid
+oTrans.PushStatusText("2", false);
             if (eugAllUsers.Rows.Count &lt; 1) {
                 DynamicQuery dq = new DynamicQuery(((Session)oTrans.Session).ConnectionPool);
                 DataSet ds = dq.ExecuteByID("CIC68322-UserLookup");
@@ -3921,6 +3904,92 @@ public class Script
                     selUsers.Add(s);
 
             eugSelectedUsers.DataSource = selUsers;
+
+//WHERE USED
+			DataTable whereused = new DataTable();
+			whereused.Columns.Add("Company", typeof(string));
+			whereused.Columns.Add("PartNum", typeof(string));
+			if((string)view.dataView[args.Row]["Character06"] != string.Empty)
+			{
+				foreach(string lines in ((string)view.dataView[args.Row]["Character06"]).Split(new string[]{Environment.NewLine}, StringSplitOptions.None))
+				{
+					string[] columns = lines.Split(new string[]{" - "}, StringSplitOptions.None);
+					DataRow r = whereused.NewRow();
+					if(columns.Length &lt; 2){
+						r["Company"] = string.Empty;
+						r["PartNum"] = columns[0].Trim();
+					}
+					else{
+						r["Company"] = columns[0].Trim();
+						r["PartNum"] = columns[1].Trim();
+					}
+					whereused.Rows.Add(r);
+				}
+			}
+			epiUltraGridC1_WhereUsed.DataSource = whereused;
+
+//JOBS
+			DataTable jobs = new DataTable();
+			jobs.Columns.Add("Company", typeof(string));
+			jobs.Columns.Add("JobNum", typeof(string));
+			jobs.Columns.Add("StartDate", typeof(DateTime));
+			jobs.Columns.Add("Qty", typeof(int));
+			if((string)view.dataView[args.Row]["Character03"]!=string.Empty)
+			{
+				foreach(string lines in ((string)view.dataView[args.Row]["Character03"]).Split(new string[]{Environment.NewLine}, StringSplitOptions.None))
+				{
+					string[] columns = lines.Split(new string[]{" - "}, StringSplitOptions.None);
+					DataRow r = jobs.NewRow();
+					if(columns.Length &lt; 4){
+						r["Company"] = string.Empty;
+						r["JobNum"] = columns[0].Trim();
+						r["StartDate"] = Convert.ToDateTime(columns[1].Trim());
+						r["Qty"] = Convert.ToInt32(columns[2].Trim());
+					}
+					else{
+						r["Company"] = columns[0].Trim();
+						r["JobNum"] = columns[1].Trim();
+						r["StartDate"] = Convert.ToDateTime(columns[2].Trim());
+						r["Qty"] = Convert.ToInt32(columns[3].Trim());
+					}
+					jobs.Rows.Add(r);
+				}
+			}
+			epiUltraGridC1_AffectedWorkorders.DataSource = jobs;
+
+//Disposition
+			DataTable disposition = new DataTable();
+			disposition.Columns.Add("Company", typeof(string));
+			disposition.Columns.Add("PartNum", typeof(string));
+			disposition.Columns.Add("Warehouse", typeof(string));
+			disposition.Columns.Add("On Hand Qty", typeof(decimal));
+			disposition.Columns.Add("Plant", typeof(string));
+
+oTrans.PushStatusText("5", false);
+			if((string)view.dataView[args.Row]["Character05"]!=string.Empty)
+			{
+				foreach(string lines in ((string)view.dataView[args.Row]["Character05"]).Split(new string[]{Environment.NewLine}, StringSplitOptions.None))
+				{
+					string[] columns = lines.Split(new string[]{" - "}, StringSplitOptions.None);
+					DataRow r = disposition.NewRow();
+					if(columns.Length &lt; 5){
+						r["Company"] = string.Empty;
+						r["PartNum"] = columns[0].Trim();
+						r["warehouse"] = columns[1].Trim();
+						r["On Hand Qty"] = Convert.ToDecimal(columns[2].Trim());
+						r["Plant"] = columns[3].Trim();
+					}else{
+						r["Company"] = columns[0].Trim();
+						r["PartNum"] = columns[1].Trim();
+						r["warehouse"] = columns[2].Trim();
+						r["On Hand Qty"] = Convert.ToDecimal(columns[3].Trim());
+						r["Plant"] = columns[4].Trim();
+					}
+					disposition.Rows.Add(r);
+				}
+			}
+			epiUltraGridC1_DispositionInfo.DataSource = disposition;
+
         }
 
         if ((args.Row &lt; 0)) {
@@ -3928,9 +3997,11 @@ public class Script
             eugSelectedUsers.DataSource = selUsers;
             eugAllUsers.DataSource = null;
         }
+oTrans.PushStatusText("edvUD100_EpiViewNotification END", false);
     }
 
     private void OpenSomeFields() {
+oTrans.PushStatusText("OpenSomeFields", false);
         bool isProtected = true;
         bool isEnabled = true;
         //bool IsStatusNull = !Protected;
@@ -3969,9 +4040,11 @@ public class Script
         btnPartNumber.Enabled = isProtected;
         //txtPartDesc.Enabled = isProtected;
         csm.GetNativeControlReference("9ba33a90-56ec-4084-ae5d-f1f45a050f92").Enabled = isProtected;
+oTrans.PushStatusText("OpenSomeFields END", false);
     }
 
     private void OpenAllFields(bool IsStatusNull) {
+oTrans.PushStatusText("OpenAllFields", false);
         bool Protected = !IsStatusNull;
         // ShortChar## are #*%!ing stupid and need ot use the native controll to do this.  
         csm.GetNativeControlReference("c8ce8aa7-2d99-4e26-b62b-b87dab0aa08f").Enabled = !Protected; //cmdStatus
@@ -4031,6 +4104,7 @@ public class Script
         chkBOMRequired.Enabled = IsStatusNull;
         csm.GetNativeControlReference("9ba33a90-56ec-4084-ae5d-f1f45a050f92").Enabled = IsStatusNull;
         //UD100Form.MainToolManager.Tools["EpiAddNewnewChild"].SharedProps.Enabled = IsStatusNull;
+oTrans.PushStatusText("OpenAllFields END", false);
     }
 
     #region UI Event Handlers
@@ -4106,7 +4180,8 @@ public class Script
         edvUD100.dataView[edvUD100.Row]["Character04"] = catUsers;
         eugSelectedUsers.DataSource = selUsers;
     }
-
+	private DataView affectedjobs;
+	private DataTable dtaffectedjobs;
     private void btnRollup_Click(object sender, EventArgs args) {
         // Clear old values
         edvUD100.dataView[edvUD100.Row]["Character03"] = "";
@@ -4114,50 +4189,162 @@ public class Script
         edvUD100.dataView[edvUD100.Row]["Character06"] = "";
 
         oTrans.PushStatusText("Gathering part where used...", true);
-        List&lt;string&gt; whereUsed = FindPartUsage();
+        newFindPartUsage();
 
         //  Roll up WHERE USED
+		oTrans.PushStatusText("Roll Up Where Used", false);
         BOReader boReader = new BOReader(((Session)oTrans.Session).ConnectionPool);
         string fieldContents = string.Empty;
-        foreach (string s in whereUsed) {
-            DataSet partDataSet = boReader.GetRows("Part", String.Format("PartNum='{0}'", s), "OnHoldReasonCode");
-            string onHold = partDataSet.Tables[0].Rows[0][0].ToString();
+		foreach(DataRow t in whereused.Rows)
+		{
+			fieldContents += string.Format("{0} - {1}{2}", (string)t["Company"], (string)t["PartNum"], Environment.NewLine);
+		}
+        edvUD100.dataView[edvUD100.Row]["Character06"] = fieldContents;
+        DynamicQueryAdapter dq1 = new DynamicQueryAdapter(oTrans);
+		dq1.BOConnect();
+        dq1.GetByID("CIC68322-PartSearch");
+		Epicor.Mfg.BO.QueryExecutionDataSet ds1 = dq1.GetQueryExecutionParameters(dq1.QueryDesignData);
+        oTrans.PushStatusText("Gathering part data...1", true);
+		DataRow r = ds1.Tables["ExecutionParameter"].NewRow();
+		r["ParameterName"] = "PartNum";
+		r["ParameterValue"] = "";
+		r["ValueType"] = "string";
+		r["IsEmpty"] = false;
+		r["RowIdent"] = string.Empty;
+		r["RowMod"] = "A";
+		ds1.Tables["ExecutionParameter"].Rows.Add(r);
+        foreach (DataRow s in whereused.Rows) {
+			oTrans.PushStatusText((string)s["PartNum"], false);
+			ds1.Tables["ExecutionParameter"].Rows[0]["ParameterValue"] = (string)s["PartNum"];
+			string resultFieldList = string.Empty;
+			int topNRecords = 0;
+			bool hasMoreRecords;
+			dq1.ExecuteByIDParametrized("CIC68322-PartSearch", ds1, "", topNRecords, out hasMoreRecords);
+			DataSet QueryResults = dq1.QueryResults;
+	        Part part = new Part(((Session)oTrans.Session).ConnectionPool);
+			string onHold = string.Empty;
+	        foreach (DataRow row in QueryResults.Tables["Results"].Rows) {
+            	onHold = row[0].ToString();
+			}
             if (!String.IsNullOrEmpty(onHold))
                 fieldContents += string.Format("{0} - {1}{2}", s, onHold, Environment.NewLine);
             else
                 fieldContents += string.Format("{0}{1}", s, Environment.NewLine);
         }
-        edvUD100.dataView[edvUD100.Row]["Character06"] = String.Join(Environment.NewLine, whereUsed.ToArray());
-
+		dq1.Dispose();
+		dq1 = null;
+//        edvUD100.dataView[edvUD100.Row]["Character06"] = String.Join(Environment.NewLine, whereUsed.ToArray());
+		oTrans.PushStatusText("Roll up Affected WOs", false);
         //  Roll up AFFECTED WOs
         oTrans.PushStatusText("Finding affected WOs...", true);
         affectedWOs = new List&lt;string&gt;();
-
-        foreach (String s in whereUsed) {
-            DataSet ds = boReader.GetRows("JobEntry", String.Format("PartNum = '{0}' AND JobClosed = FALSE AND JobFirm = TRUE", s), "JobNum,StartDate,ProdQty");
-            foreach (DataRow dr in ds.Tables[0].Rows)
-                affectedWOs.Add(String.Format("{0} - {1} - {2}", dr[0], Convert.ToDateTime(dr[1]).ToString("dd-MMM-yy"), Convert.ToInt32(dr[2]).ToString("D3")));
+		string whereClause = string.Empty;
+		if(affectedjobs == null){ // only run the query once.
+			DynamicQueryAdapter dq = new DynamicQueryAdapter(this.oTrans);
+			dq.BOConnect();
+			string QueryID = "CIC68322-AffectedJobs";
+			dq.ExecuteByID(QueryID);
+			affectedjobs = new DataView(dq.QueryResults.Tables[0]);
+			dq.Dispose();
+			dq = null;
+		}
+        oTrans.PushStatusText("Finding JobHead.PartNum...", true);
+		dtaffectedjobs = new DataTable();
+		dtaffectedjobs.Columns.Add("Company", typeof(string));
+		dtaffectedjobs.Columns.Add("JobNum", typeof(string));
+		dtaffectedjobs.Columns.Add("StartDate", typeof(DateTime));
+		dtaffectedjobs.Columns.Add("Qty", typeof(int));
+        foreach (DataRow row in whereused.Rows) {
+			string s = (string)row["PartNum"];
+			whereClause = string.Format("JobHead.PartNum='{0}'", s);
+			affectedjobs.RowFilter = whereClause;
+            foreach (DataRowView dr in affectedjobs){
+				DataRow newrow = dtaffectedjobs.NewRow();
+        oTrans.PushStatusText(string.Format("Finding JobHead.PartNum...1"), true);
+				newrow["Company"]= (string)dr[0];
+        oTrans.PushStatusText(string.Format("Finding JobHead.PartNum...2"), true);
+				newrow["JobNum"] = (string)dr[1];
+        oTrans.PushStatusText(string.Format("Finding JobHead.PartNum...3"), true);
+				try{
+				newrow["StartDate"] = Convert.ToDateTime(dr[2]);
+				}
+				catch{}
+        oTrans.PushStatusText(string.Format("Finding JobHead.PartNum...4"), true);
+				newrow["Qty"] = Convert.ToInt32((decimal)dr[3]);
+				dtaffectedjobs.Rows.Add(newrow);
+//                affectedWOs.Add(String.Format("{0} - {1} - {2} - {3}", dr[0], dr[1], Convert.ToDateTime(dr[2]).ToString("dd-MMM-yy"), Convert.ToInt32(dr[3]).ToString("D3")));
+			}
         }
 
+		epiUltraGridC1_AffectedWorkorders.DataSource = dtaffectedjobs;
+
         fieldContents = "";
-        foreach (String s in affectedWOs)
-            fieldContents += s + Environment.NewLine;
+		foreach(DataRow t in dtaffectedjobs.Rows)
+		{
+			fieldContents += string.Format("{0} - {1} - {2} - {3}{4}", (string)t["Company"], (string)t["JobNum"], (DateTime)t["StartDate"], (int)t["Qty"], Environment.NewLine);
+		}
 
         edvUD100.dataView[edvUD100.Row]["Character03"] = fieldContents;
 
+        oTrans.PushStatusText("Finding Inventory...", true);
         // Find inventory
+		//CIC68322-PartWhseSearch_ECR
+        DynamicQueryAdapter dq2 = new DynamicQueryAdapter(oTrans);
+		dq2.BOConnect();
+        dq2.GetByID("CIC68322-PartWhseSearch_ECR");
+		Epicor.Mfg.BO.QueryExecutionDataSet ds2 = dq2.GetQueryExecutionParameters(dq2.QueryDesignData);
+        oTrans.PushStatusText("Gathering part data...1", true);
+		DataRow r2 = ds2.Tables["ExecutionParameter"].NewRow();
+		r2["ParameterName"] = "PartNum";
+		r2["ParameterValue"] = "";
+		r2["ValueType"] = "string";
+		r2["IsEmpty"] = false;
+		r2["RowIdent"] = string.Empty;
+		r2["RowMod"] = "A";
+		ds2.Tables["ExecutionParameter"].Rows.Add(r2);
+
+
+
+
         oTrans.PushStatusText("Finding usage...", true);
-        disposition = new List&lt;string&gt;();
-        foreach (String s in whereUsed) {
-            DataSet ds = boReader.GetRows("PartWhseSearch", String.Format("PartNum = '{0}'", s), "OnHandQty,WarehouseCode,Plant");
-            foreach (DataRow row in ds.Tables[0].Rows)
-                if (Convert.ToDecimal(row[0]) != 0)
-                    disposition.Add(String.Format("{0} - {1} - {2} - {3}", s, row[1], row[0], row[2]));
+
+		DataTable dispositioninfo = new DataTable();
+		dispositioninfo.Columns.Add("Company", typeof(string));
+		dispositioninfo.Columns.Add("PartNum", typeof(string));
+		dispositioninfo.Columns.Add("Warehouse", typeof(string));
+		dispositioninfo.Columns.Add("On Hand Qty", typeof(decimal));
+		dispositioninfo.Columns.Add("Plant", typeof(string));
+        foreach (DataRow partrow in whereused.Rows) {
+			ds2.Tables["ExecutionParameter"].Rows[0]["ParameterValue"] = (string)partrow["PartNum"];
+			int topNRecords = 0;
+			bool hasMoreRecords;
+			dq2.ExecuteByIDParametrized("CIC68322-PartWhseSearch_ECR", ds2, "", topNRecords, out hasMoreRecords);
+	        foreach (DataRow row in dq2.QueryResults.Tables["Results"].Rows) {
+	            if (Convert.ToDecimal(row[3]) != 0)
+				{
+					DataRow newrow = dispositioninfo.NewRow();
+					newrow["Company"] = (string)row[0];
+					newrow["PartNum"] = (string)row[1];
+					newrow["Warehouse"] = (string)row[2];
+					newrow["On Hand Qty"] = Convert.ToDecimal(row[3]);
+					newrow["Plant"] = row[4].ToString();
+					dispositioninfo.Rows.Add(newrow);
+				}
+			}
         }
 
+		DataView dv = new DataView(dispositioninfo);
+		dv.Sort = "Company, PartNum, Warehouse, On Hand Qty, Plant";
+		dispositioninfo = dv.ToTable(true, "Company", "PartNum", "Warehouse", "On Hand Qty", "Plant");
+
+		epiUltraGridC1_DispositionInfo.DataSource = dispositioninfo;
+		dq2.Dispose();
+
         fieldContents = "";
-        foreach (String s in disposition)
-            fieldContents += s + Environment.NewLine;
+		foreach(DataRow t in dispositioninfo.Rows)
+		{
+			fieldContents += string.Format("{0} - {1} - {2} - {3} - {4}{5}", (string)t["Company"], (string)t["PartNum"], (string)t["Warehouse"], (decimal)t["On Hand Qty"], (string)t["Plant"], Environment.NewLine);
+		}
 
         edvUD100.dataView[edvUD100.Row]["Character05"] = fieldContents;
 
@@ -4167,6 +4354,7 @@ public class Script
 
     #region Email functionality
     private void SendStatusAlerts(string status, string ECRNum) {
+oTrans.PushStatusText("SendStatusAlerts", false);
         string subject = string.Format("ECR: {0} Status Changed to {1}", ECRNum, status);
         string body = string.Format("ECR: {0} Status Changed to {1}", ECRNum, status);
         Stopwatch stopwatch = Stopwatch.StartNew();
@@ -4185,7 +4373,8 @@ public class Script
                 break;
             case "Open": {
                 oTrans.PushDisposableStatusText("Emailing team lead...", true);
-				List&lt;string&gt; addresses = GetTeamLeadEmailAddresses();
+				//List&lt;string&gt; addresses = GetTeamLeadEmailAddresses();
+				 List&lt;string&gt; addresses = GetSelectedUserEmailAddresses();
                 SendEmail(addresses, subject, body);
             }
                 break;
@@ -4201,6 +4390,7 @@ public class Script
                 break;
         }
         SayElapsedTime(stopwatch.Elapsed);
+oTrans.PushStatusText("SendStatusAlerts end", false);
     }
 
     private DataTable GetUserFileRows() {
@@ -4389,24 +4579,37 @@ public class Script
 
     #region Checkbox Functions
     private bool IsAcknowledged(DataColumnChangeEventArgs args) {
+		oTrans.PushStatusText("IsAcknowledged", false);
         //  Cross reference ack field to app fields
         Dictionary&lt;string, string&gt; FieldRef = new Dictionary&lt;string, string&gt;();
+		oTrans.PushStatusText("IsAcknowledged 1", false);
         FieldRef.Add("CertificationAppCheckbox", "CertificationAckCheckbox");
+		oTrans.PushStatusText("IsAcknowledged 2", false);
         FieldRef.Add("ContractsAppCheckbox", "ContractsAckCheckbox");
+		oTrans.PushStatusText("IsAcknowledged 3", false);
         FieldRef.Add("DesignEngAppCheckbox", "DesignEngAckCheckbox");
+		oTrans.PushStatusText("IsAcknowledged 4", false);
         FieldRef.Add("MangEngAppCheckbox", "MangEngAckCheckbox");
+		oTrans.PushStatusText("IsAcknowledged 5", false);
         FieldRef.Add("ProductionControlAppCheckbox", "ProductionControlAckCheckbox");
+		oTrans.PushStatusText("IsAcknowledged 6", false);
         FieldRef.Add("QualityAppCheckbox", "QualityAckCheckbox");
+		oTrans.PushStatusText("IsAcknowledged 7", false);
         FieldRef.Add("AS9100_AppCheckBox", "AS9100_AckCheckBox"); //added by Scott
+		oTrans.PushStatusText("IsAcknowledged 8", false);
         FieldRef.Add("SCM_AppCheckbox", "SCM_AckCheckbox"); //added by Scott
+		oTrans.PushStatusText("IsAcknowledged 9", false);
 		FieldRef.Add("SCM_2_AppCheckbox", "SCM_2_AckCheckbox"); //added by Scott
+		oTrans.PushStatusText("IsAcknowledged 10", false);
 		
-
-        bool Ack = Convert.ToBoolean(edvUD100.dataView[edvUD100.Row][FieldRef[args.Column.ColumnName]]);
+        //bool Ack = Convert.ToBoolean(edvUD100.dataView[edvUD100.Row][FieldRef[args.Column.ColumnName]]);
+        bool Ack = Convert.ToBoolean(args.ProposedValue);
+		oTrans.PushStatusText("IsAcknowledged END", false);
         return Ack;
     }
 
     private void SetCheckBoxNotes(DataColumnChangeEventArgs args) {
+oTrans.PushStatusText("SetCheckBoxNotes", false);
         //  Store relationship between check boxes and note fields
         Dictionary&lt;string, string&gt; FieldRef = new Dictionary&lt;string, string&gt;();
         FieldRef.Add("CertificationAckCheckbox", "CertificationAckNotes");
@@ -4459,9 +4662,10 @@ public class Script
             edvUD100.dataView[edvUD100.Row][FieldRef[ColumnName]] = string.Format("{0}-{1}-{2} ", ((Session)oTrans.Session).UserID, DateTime.Now.ToShortTimeString(), DateTime.Today.ToString("dd-MMM-yy"));
         else if (!ProposedValue)
             edvUD100.dataView[edvUD100.Row][FieldRef[ColumnName]] = "";
+oTrans.PushStatusText("SetCheckBoxNotes END", false);
     }
     #endregion
-
+	private DataTable whereused;
     private List&lt;string&gt; FindPartUsage() {
         // Find all parts containing ECR parts.
         oTrans.PushStatusText("Gathering part where used...", true);
@@ -4491,6 +4695,83 @@ public class Script
         return whereUsed;
     }
 
+    private void newFindPartUsage() {
+		whereused = new DataTable();
+		whereused.Columns.Add("Company", typeof(string));
+		whereused.Columns.Add("PartNum", typeof(string));
+        // Find all parts containing ECR parts.
+        oTrans.PushStatusText("Gathering part where used...", true);
+        List&lt;string&gt; whereUsed = new List&lt;string&gt;();
+        DynamicQueryAdapter dq = new DynamicQueryAdapter(oTrans);
+		dq.BOConnect();
+        dq.GetByID("CIC68322-ECRRollupIndividual");
+		Epicor.Mfg.BO.QueryExecutionDataSet ds = dq.GetQueryExecutionParameters(dq.QueryDesignData);
+        oTrans.PushStatusText("Gathering part where used...1", true);
+		DataRow r = ds.Tables["ExecutionParameter"].NewRow();
+		r["ParameterName"] = "PartNum";
+		r["ParameterValue"] = string.Empty;
+		r["ValueType"] = "string";
+		r["IsEmpty"] = false;
+		r["RowIdent"] = string.Empty;
+		r["RowMod"] = "A";
+		ds.Tables["ExecutionParameter"].Rows.Add(r);
+		string resultFieldList = string.Empty;
+		int topNRecords = 0;
+		bool hasMoreRecords;
+
+        DynamicQueryAdapter partsearch = new DynamicQueryAdapter(oTrans);
+		partsearch.BOConnect();
+        partsearch.GetByID("CIC68322-PartSearch");
+		Epicor.Mfg.BO.QueryExecutionDataSet ds_partsearch = partsearch.GetQueryExecutionParameters(partsearch.QueryDesignData);
+        oTrans.PushStatusText("Gathering part data...1", true);
+		DataRow r_partsearch = ds_partsearch.Tables["ExecutionParameter"].NewRow();
+		r_partsearch["ParameterName"] = "PartNum";
+		r_partsearch["ParameterValue"] = "";
+		r_partsearch["ValueType"] = "string";
+		r_partsearch["IsEmpty"] = false;
+		r_partsearch["RowIdent"] = string.Empty;
+		r_partsearch["RowMod"] = "A";
+		ds_partsearch.Tables["ExecutionParameter"].Rows.Add(r_partsearch);
+
+		foreach(DataRowView DRV in edvUD100A.dataView)
+		{
+			ds_partsearch.Tables["ExecutionParameter"].Rows[0]["ParameterValue"] = (string)DRV["ChildKey1"];
+			partsearch.ExecuteByIDParametrized("CIC68322-PartSearch", ds_partsearch, "", topNRecords, out hasMoreRecords);
+			foreach(DataRow row in partsearch.QueryResults.Tables["Results"].Rows){
+						DataRow childnewrow = whereused.NewRow();
+						childnewrow["Company"] = (string)row[3];
+						childnewrow["PartNum"] = (string)row[2];
+						whereused.Rows.Add(childnewrow);
+			}
+
+
+			ds.Tables["ExecutionParameter"].Rows[0]["ParameterValue"] = (string)DRV["ChildKey1"];
+			dq.ExecuteByIDParametrized("CIC68322-ECRRollupIndividual", ds, "", topNRecords, out hasMoreRecords);
+	        oTrans.PushStatusText("Gathering part where used...2", true);
+			DataSet QueryResults = dq.QueryResults;
+	        oTrans.PushStatusText(string.Format("Gathering part where used...3({0})",QueryResults.Tables["Results"].Rows.Count), true);
+	        foreach (DataRow row in QueryResults.Tables["Results"].Rows) {
+	            for (int i = 0; i &lt;= 5; i++) {
+					if(!String.IsNullOrEmpty(row[i].ToString()) &amp;&amp; !String.IsNullOrEmpty(row[5 + i].ToString())){
+						DataRow childnewrow = whereused.NewRow();
+						childnewrow["Company"] = (string)row[5+i];
+						childnewrow["PartNum"] = (string)row[i];
+						whereused.Rows.Add(childnewrow);
+					}
+	            }
+	        }
+		}
+		oTrans.PushStatusText("Getting distinct and ordering...", false);
+		DataView dv = new DataView(whereused);
+		dv.Sort = "Company, PartNum";
+		whereused = dv.ToTable(true, "Company", "PartNum");
+		epiUltraGridC1_WhereUsed.DataSource = whereused;
+		dq.Dispose();
+		dq = null;
+		partsearch.Dispose();
+		partsearch = null;
+    }
+
     private List&lt;string&gt; RemoveDuplicates(List&lt;string&gt; lines) {
         Dictionary&lt;string, bool&gt; distinct = new Dictionary&lt;string, bool&gt;();
         foreach (string line in lines)
@@ -4501,6 +4782,20 @@ public class Script
     private void Debug(string s) {
         MessageBox.Show(s);
     }
+
+	private void edvUD100A_EpiViewNotification(EpiDataView view, EpiNotifyArgs args)
+	{
+		// ** Argument Properties and Uses **
+		// view.dataView[args.Row]["FieldName"]
+		// args.Row, args.Column, args.Sender, args.NotifyType
+		// NotifyType.Initialize, NotifyType.AddRow, NotifyType.DeleteRow, NotifyType.InitLastView, NotifyType.InitAndResetTreeNodes
+		if ((args.NotifyType == EpiTransaction.NotifyType.AddRow))
+		{
+			if ((args.Row &gt; -1))
+			{
+			}
+		}
+	}
 }
 </PropertyValue>
     <Company />
@@ -5147,286 +5442,10 @@ public class Script
   </Properties>
   <Properties>
     <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC7</ControlName>
-    <Key>3accbb2f-731f-444d-a51e-f71030a585d1</Key>
-    <PropertyName>ChildIndex</PropertyName>
-    <PropertyValue>1</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC7</ControlName>
-    <Key>3accbb2f-731f-444d-a51e-f71030a585d1</Key>
-    <PropertyName>Parent</PropertyName>
-    <PropertyValue>810241f6-e91e-4112-be62-f77982737f3c</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC7</ControlName>
-    <Key>3accbb2f-731f-444d-a51e-f71030a585d1</Key>
-    <PropertyName>Height</PropertyName>
-    <PropertyValue>16</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC7</ControlName>
-    <Key>3accbb2f-731f-444d-a51e-f71030a585d1</Key>
-    <PropertyName>Width</PropertyName>
-    <PropertyValue>142</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC7</ControlName>
-    <Key>3accbb2f-731f-444d-a51e-f71030a585d1</Key>
-    <PropertyName>Left</PropertyName>
-    <PropertyValue>777</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC7</ControlName>
-    <Key>3accbb2f-731f-444d-a51e-f71030a585d1</Key>
-    <PropertyName>Top</PropertyName>
-    <PropertyValue>232</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC7</ControlName>
-    <Key>3accbb2f-731f-444d-a51e-f71030a585d1</Key>
-    <PropertyName>Text</PropertyName>
-    <PropertyValue>Dispositon Info:</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
     <ControlName>epiLabelC6</ControlName>
     <Key>3fe04bd8-60f8-4c24-90fc-f1eed4a6f51f</Key>
     <PropertyName>Text</PropertyName>
     <PropertyValue>Reason Code:</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC7</ControlName>
-    <Key>02cd5f09-9d9c-4c5b-98a5-0154887030e3</Key>
-    <PropertyName>ChildIndex</PropertyName>
-    <PropertyValue>1</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC7</ControlName>
-    <Key>02cd5f09-9d9c-4c5b-98a5-0154887030e3</Key>
-    <PropertyName>Parent</PropertyName>
-    <PropertyValue>810241f6-e91e-4112-be62-f77982737f3c</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC7</ControlName>
-    <Key>02cd5f09-9d9c-4c5b-98a5-0154887030e3</Key>
-    <PropertyName>Height</PropertyName>
-    <PropertyValue>268</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC7</ControlName>
-    <Key>02cd5f09-9d9c-4c5b-98a5-0154887030e3</Key>
-    <PropertyName>Width</PropertyName>
-    <PropertyValue>204</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC7</ControlName>
-    <Key>02cd5f09-9d9c-4c5b-98a5-0154887030e3</Key>
-    <PropertyName>Left</PropertyName>
-    <PropertyValue>620</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC7</ControlName>
-    <Key>02cd5f09-9d9c-4c5b-98a5-0154887030e3</Key>
-    <PropertyName>Top</PropertyName>
-    <PropertyValue>248</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC10</ControlName>
-    <Key>b3af526d-12f3-4d2a-abd7-26c24cdff3f3</Key>
-    <PropertyName>ChildIndex</PropertyName>
-    <PropertyValue>1</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC10</ControlName>
-    <Key>b3af526d-12f3-4d2a-abd7-26c24cdff3f3</Key>
-    <PropertyName>Parent</PropertyName>
-    <PropertyValue>810241f6-e91e-4112-be62-f77982737f3c</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC10</ControlName>
-    <Key>b3af526d-12f3-4d2a-abd7-26c24cdff3f3</Key>
-    <PropertyName>Height</PropertyName>
-    <PropertyValue>14</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC10</ControlName>
-    <Key>b3af526d-12f3-4d2a-abd7-26c24cdff3f3</Key>
-    <PropertyName>Width</PropertyName>
-    <PropertyValue>168</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC10</ControlName>
-    <Key>b3af526d-12f3-4d2a-abd7-26c24cdff3f3</Key>
-    <PropertyName>Left</PropertyName>
-    <PropertyValue>571</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC10</ControlName>
-    <Key>b3af526d-12f3-4d2a-abd7-26c24cdff3f3</Key>
-    <PropertyName>Top</PropertyName>
-    <PropertyValue>232</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC7</ControlName>
-    <Key>02cd5f09-9d9c-4c5b-98a5-0154887030e3</Key>
-    <PropertyName>EpiBinding</PropertyName>
-    <PropertyValue>UD100.Character03</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC7</ControlName>
-    <Key>02cd5f09-9d9c-4c5b-98a5-0154887030e3</Key>
-    <PropertyName>EpiLabel</PropertyName>
-    <PropertyValue />
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC10</ControlName>
-    <Key>b3af526d-12f3-4d2a-abd7-26c24cdff3f3</Key>
-    <PropertyName>Text</PropertyName>
-    <PropertyValue>Affected Workorders:</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC7</ControlName>
-    <Key>02cd5f09-9d9c-4c5b-98a5-0154887030e3</Key>
-    <PropertyName>Multiline</PropertyName>
-    <PropertyValue>True</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -8867,282 +8886,6 @@ public class Script
   </Properties>
   <Properties>
     <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC7</ControlName>
-    <Key>02cd5f09-9d9c-4c5b-98a5-0154887030e3</Key>
-    <PropertyName>TabIndex</PropertyName>
-    <PropertyValue>27</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC1</ControlName>
-    <Key>38bd102d-5180-4518-9d0d-3df1fd9b3012</Key>
-    <PropertyName>ChildIndex</PropertyName>
-    <PropertyValue>1</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC1</ControlName>
-    <Key>38bd102d-5180-4518-9d0d-3df1fd9b3012</Key>
-    <PropertyName>Parent</PropertyName>
-    <PropertyValue>810241f6-e91e-4112-be62-f77982737f3c</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC1</ControlName>
-    <Key>38bd102d-5180-4518-9d0d-3df1fd9b3012</Key>
-    <PropertyName>Height</PropertyName>
-    <PropertyValue>268</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC1</ControlName>
-    <Key>38bd102d-5180-4518-9d0d-3df1fd9b3012</Key>
-    <PropertyName>Width</PropertyName>
-    <PropertyValue>239</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC1</ControlName>
-    <Key>38bd102d-5180-4518-9d0d-3df1fd9b3012</Key>
-    <PropertyName>Left</PropertyName>
-    <PropertyValue>376</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC1</ControlName>
-    <Key>38bd102d-5180-4518-9d0d-3df1fd9b3012</Key>
-    <PropertyName>Top</PropertyName>
-    <PropertyValue>248</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC1</ControlName>
-    <Key>38bd102d-5180-4518-9d0d-3df1fd9b3012</Key>
-    <PropertyName>EpiBinding</PropertyName>
-    <PropertyValue>UD100.Character06</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC8</ControlName>
-    <Key>1363085c-ba35-42d0-bbd7-18a3f68ea31d</Key>
-    <PropertyName>ChildIndex</PropertyName>
-    <PropertyValue>1</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC8</ControlName>
-    <Key>1363085c-ba35-42d0-bbd7-18a3f68ea31d</Key>
-    <PropertyName>Parent</PropertyName>
-    <PropertyValue>810241f6-e91e-4112-be62-f77982737f3c</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC8</ControlName>
-    <Key>1363085c-ba35-42d0-bbd7-18a3f68ea31d</Key>
-    <PropertyName>Height</PropertyName>
-    <PropertyValue>11</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC8</ControlName>
-    <Key>1363085c-ba35-42d0-bbd7-18a3f68ea31d</Key>
-    <PropertyName>Width</PropertyName>
-    <PropertyValue>93</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC8</ControlName>
-    <Key>1363085c-ba35-42d0-bbd7-18a3f68ea31d</Key>
-    <PropertyName>Left</PropertyName>
-    <PropertyValue>356</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC8</ControlName>
-    <Key>1363085c-ba35-42d0-bbd7-18a3f68ea31d</Key>
-    <PropertyName>Top</PropertyName>
-    <PropertyValue>232</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiLabelC8</ControlName>
-    <Key>1363085c-ba35-42d0-bbd7-18a3f68ea31d</Key>
-    <PropertyName>Text</PropertyName>
-    <PropertyValue>Where Used:</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC19</ControlName>
-    <Key>b34708ec-5daf-4aec-9951-d52b8742e832</Key>
-    <PropertyName>ChildIndex</PropertyName>
-    <PropertyValue>0</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC19</ControlName>
-    <Key>b34708ec-5daf-4aec-9951-d52b8742e832</Key>
-    <PropertyName>Parent</PropertyName>
-    <PropertyValue>810241f6-e91e-4112-be62-f77982737f3c</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC19</ControlName>
-    <Key>b34708ec-5daf-4aec-9951-d52b8742e832</Key>
-    <PropertyName>Height</PropertyName>
-    <PropertyValue>268</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC19</ControlName>
-    <Key>b34708ec-5daf-4aec-9951-d52b8742e832</Key>
-    <PropertyName>Width</PropertyName>
-    <PropertyValue>187</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC19</ControlName>
-    <Key>b34708ec-5daf-4aec-9951-d52b8742e832</Key>
-    <PropertyName>Left</PropertyName>
-    <PropertyValue>828</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC19</ControlName>
-    <Key>b34708ec-5daf-4aec-9951-d52b8742e832</Key>
-    <PropertyName>Top</PropertyName>
-    <PropertyValue>248</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC19</ControlName>
-    <Key>b34708ec-5daf-4aec-9951-d52b8742e832</Key>
-    <PropertyName>EpiBinding</PropertyName>
-    <PropertyValue>UD100.Character05</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC19</ControlName>
-    <Key>b34708ec-5daf-4aec-9951-d52b8742e832</Key>
-    <PropertyName>EpiLabel</PropertyName>
-    <PropertyValue />
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
     <ControlName>dockableWindow2</ControlName>
     <Key>mainPanel1.windowDockingArea1.dockableWindow2</Key>
     <PropertyName>Top</PropertyName>
@@ -9358,18 +9101,6 @@ public class Script
     <PropertiesID />
   </Properties>
   <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC1</ControlName>
-    <Key>38bd102d-5180-4518-9d0d-3df1fd9b3012</Key>
-    <PropertyName>Multiline</PropertyName>
-    <PropertyValue>True</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
     <FormsID>childListPanel1</FormsID>
     <ControlName>grdList</ControlName>
     <Key>87f88dc8-1b94-4324-ba83-583a2af5cbb9</Key>
@@ -9435,18 +9166,6 @@ public class Script
     <Key>3b9a9019-2fd9-4601-9e9d-c13372ae7928</Key>
     <PropertyName>EpiLabel</PropertyName>
     <PropertyValue>epiLabelC28</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC19</ControlName>
-    <Key>b34708ec-5daf-4aec-9951-d52b8742e832</Key>
-    <PropertyName>Multiline</PropertyName>
-    <PropertyValue>True</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -13451,42 +13170,6 @@ public class Script
   </Properties>
   <Properties>
     <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC7</ControlName>
-    <Key>02cd5f09-9d9c-4c5b-98a5-0154887030e3</Key>
-    <PropertyName>ScrollBars</PropertyName>
-    <PropertyValue>Vertical</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC19</ControlName>
-    <Key>b34708ec-5daf-4aec-9951-d52b8742e832</Key>
-    <PropertyName>ScrollBars</PropertyName>
-    <PropertyValue>Vertical</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC1</ControlName>
-    <Key>38bd102d-5180-4518-9d0d-3df1fd9b3012</Key>
-    <PropertyName>ScrollBars</PropertyName>
-    <PropertyValue>Vertical</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
     <ControlName>grdList</ControlName>
     <Key>87f88dc8-1b94-4324-ba83-583a2af5cbb9</Key>
     <PropertyName>Width</PropertyName>
@@ -15375,90 +15058,6 @@ public class Script
     <Key>d447c9ab-57a0-44ee-b37e-c9a4599fabb3</Key>
     <PropertyName>Text</PropertyName>
     <PropertyValue>Gerber To Do:</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC1</ControlName>
-    <Key>cdd50446-7d99-42bd-8271-466b7611227b</Key>
-    <PropertyName>ChildIndex</PropertyName>
-    <PropertyValue>1</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC1</ControlName>
-    <Key>cdd50446-7d99-42bd-8271-466b7611227b</Key>
-    <PropertyName>Parent</PropertyName>
-    <PropertyValue>1cc1d4d5-0a12-4c23-b0f6-08f69ce43db6</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC1</ControlName>
-    <Key>cdd50446-7d99-42bd-8271-466b7611227b</Key>
-    <PropertyName>Height</PropertyName>
-    <PropertyValue>354</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC1</ControlName>
-    <Key>cdd50446-7d99-42bd-8271-466b7611227b</Key>
-    <PropertyName>Width</PropertyName>
-    <PropertyValue>281</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC1</ControlName>
-    <Key>cdd50446-7d99-42bd-8271-466b7611227b</Key>
-    <PropertyName>Left</PropertyName>
-    <PropertyValue>444</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC1</ControlName>
-    <Key>cdd50446-7d99-42bd-8271-466b7611227b</Key>
-    <PropertyName>Top</PropertyName>
-    <PropertyValue>120</PropertyValue>
-    <Company />
-    <Plant />
-    <DcdUserID />
-    <GroupID />
-    <PropertiesID />
-  </Properties>
-  <Properties>
-    <FormsID>UD100Form</FormsID>
-    <ControlName>epiTextBoxC1</ControlName>
-    <Key>cdd50446-7d99-42bd-8271-466b7611227b</Key>
-    <PropertyName>EpiBinding</PropertyName>
-    <PropertyValue>UD100A.Character02</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -22250,7 +21849,7 @@ public class Script
     <ControlName>txtProdConNotes</ControlName>
     <Key>44698153-88ee-4117-9ecf-2b7afa36d137</Key>
     <PropertyName>ChildIndex</PropertyName>
-    <PropertyValue>8</PropertyValue>
+    <PropertyValue>9</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -22394,7 +21993,7 @@ public class Script
     <ControlName>txtQualityNotes</ControlName>
     <Key>5a18986b-ae04-43a9-b290-207c5c86ad50</Key>
     <PropertyName>ChildIndex</PropertyName>
-    <PropertyValue>9</PropertyValue>
+    <PropertyValue>10</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -26654,7 +26253,7 @@ public class Script
     <ControlName>epiCheckBoxC25</ControlName>
     <Key>7e1b3774-0853-4817-8394-db943791c861</Key>
     <PropertyName>ChildIndex</PropertyName>
-    <PropertyValue>6</PropertyValue>
+    <PropertyValue>7</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -26798,7 +26397,7 @@ public class Script
     <ControlName>epiTextBoxC8</ControlName>
     <Key>9b5738c0-c436-4b07-b581-04669f7ef6da</Key>
     <PropertyName>ChildIndex</PropertyName>
-    <PropertyValue>4</PropertyValue>
+    <PropertyValue>5</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -26870,7 +26469,7 @@ public class Script
     <ControlName>epiTextBoxC9</ControlName>
     <Key>38630db8-3fa5-4afa-b63e-452fd42cd94a</Key>
     <PropertyName>ChildIndex</PropertyName>
-    <PropertyValue>5</PropertyValue>
+    <PropertyValue>6</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -26942,7 +26541,7 @@ public class Script
     <ControlName>epiUltraComboC1</ControlName>
     <Key>38dcd69b-b684-4cde-affb-5d6371d738df</Key>
     <PropertyName>ChildIndex</PropertyName>
-    <PropertyValue>13</PropertyValue>
+    <PropertyValue>14</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -27302,7 +26901,7 @@ public class Script
     <ControlName>epiTextBoxC10</ControlName>
     <Key>b1d3ba2f-5471-40a4-83b5-6b673efde4fe</Key>
     <PropertyName>ChildIndex</PropertyName>
-    <PropertyValue>10</PropertyValue>
+    <PropertyValue>11</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -27518,7 +27117,7 @@ public class Script
     <ControlName>epiLabelC32</ControlName>
     <Key>742a6ae8-a78b-4f58-8489-cf95f2ff88e9</Key>
     <PropertyName>ChildIndex</PropertyName>
-    <PropertyValue>14</PropertyValue>
+    <PropertyValue>0</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -27554,7 +27153,7 @@ public class Script
     <ControlName>epiLabelC32</ControlName>
     <Key>742a6ae8-a78b-4f58-8489-cf95f2ff88e9</Key>
     <PropertyName>Width</PropertyName>
-    <PropertyValue>158</PropertyValue>
+    <PropertyValue>291</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -27566,7 +27165,7 @@ public class Script
     <ControlName>epiLabelC32</ControlName>
     <Key>742a6ae8-a78b-4f58-8489-cf95f2ff88e9</Key>
     <PropertyName>Left</PropertyName>
-    <PropertyValue>748</PropertyValue>
+    <PropertyValue>639</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -27578,7 +27177,7 @@ public class Script
     <ControlName>epiLabelC32</ControlName>
     <Key>742a6ae8-a78b-4f58-8489-cf95f2ff88e9</Key>
     <PropertyName>Top</PropertyName>
-    <PropertyValue>108</PropertyValue>
+    <PropertyValue>104</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -27602,7 +27201,7 @@ public class Script
     <ControlName>epiLabelC32</ControlName>
     <Key>742a6ae8-a78b-4f58-8489-cf95f2ff88e9</Key>
     <PropertyName>AnchorTop</PropertyName>
-    <PropertyValue>108</PropertyValue>
+    <PropertyValue>104</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -27614,7 +27213,7 @@ public class Script
     <ControlName>epiLabelC32</ControlName>
     <Key>742a6ae8-a78b-4f58-8489-cf95f2ff88e9</Key>
     <PropertyName>AnchorLeft</PropertyName>
-    <PropertyValue>748</PropertyValue>
+    <PropertyValue>639</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -27626,7 +27225,7 @@ public class Script
     <ControlName>epiLabelC32</ControlName>
     <Key>742a6ae8-a78b-4f58-8489-cf95f2ff88e9</Key>
     <PropertyName>AnchorWidth</PropertyName>
-    <PropertyValue>158</PropertyValue>
+    <PropertyValue>291</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -27662,7 +27261,7 @@ public class Script
     <ControlName>epiLabelC32</ControlName>
     <Key>742a6ae8-a78b-4f58-8489-cf95f2ff88e9</Key>
     <PropertyName>Font.Underline</PropertyName>
-    <PropertyValue>True</PropertyValue>
+    <PropertyValue>False</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -29522,7 +29121,7 @@ public class Script
     <ControlName>epiCheckBoxC29</ControlName>
     <Key>aa03cbe6-f1d2-4b7c-aa8e-b627f67b1190</Key>
     <PropertyName>ChildIndex</PropertyName>
-    <PropertyValue>1</PropertyValue>
+    <PropertyValue>2</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -29594,7 +29193,7 @@ public class Script
     <ControlName>epiTextBoxC16</ControlName>
     <Key>c7a8df7a-392b-473f-9ab3-b4a0b52f6798</Key>
     <PropertyName>ChildIndex</PropertyName>
-    <PropertyValue>2</PropertyValue>
+    <PropertyValue>3</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -29930,7 +29529,7 @@ public class Script
     <ControlName>epiTextBoxC17</ControlName>
     <Key>8bb9b03a-cb80-4ebb-bce6-e00546ab9bf8</Key>
     <PropertyName>ChildIndex</PropertyName>
-    <PropertyValue>3</PropertyValue>
+    <PropertyValue>4</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -30062,7 +29661,7 @@ public class Script
     <ControlName>epiCheckBoxC30</ControlName>
     <Key>4588e36b-caed-4b82-ac83-822883ea1f6e</Key>
     <PropertyName>ChildIndex</PropertyName>
-    <PropertyValue>7</PropertyValue>
+    <PropertyValue>8</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -30194,7 +29793,7 @@ public class Script
     <ControlName>epiUltraComboC2</ControlName>
     <Key>8229d4d0-cc0a-49ce-b446-147a8ef78f43</Key>
     <PropertyName>ChildIndex</PropertyName>
-    <PropertyValue>11</PropertyValue>
+    <PropertyValue>12</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -30314,7 +29913,7 @@ public class Script
     <ControlName>epiTextBoxC18</ControlName>
     <Key>4d77d029-a2d2-4f48-95d5-18081094da6b</Key>
     <PropertyName>ChildIndex</PropertyName>
-    <PropertyValue>12</PropertyValue>
+    <PropertyValue>13</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
@@ -30699,6 +30298,330 @@ public class Script
     <Key>dbbced95-b8e7-478b-aa0d-7c24bcf15f3f</Key>
     <PropertyName>AnchorHeight</PropertyName>
     <PropertyValue>17</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_WhereUsed</ControlName>
+    <Key>cb6062b3-4365-4428-8a8e-afb5d1ccdb31</Key>
+    <PropertyName>ChildIndex</PropertyName>
+    <PropertyValue>0</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_WhereUsed</ControlName>
+    <Key>cb6062b3-4365-4428-8a8e-afb5d1ccdb31</Key>
+    <PropertyName>Parent</PropertyName>
+    <PropertyValue>810241f6-e91e-4112-be62-f77982737f3c</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_WhereUsed</ControlName>
+    <Key>cb6062b3-4365-4428-8a8e-afb5d1ccdb31</Key>
+    <PropertyName>Height</PropertyName>
+    <PropertyValue>281</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_WhereUsed</ControlName>
+    <Key>cb6062b3-4365-4428-8a8e-afb5d1ccdb31</Key>
+    <PropertyName>Width</PropertyName>
+    <PropertyValue>247</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_WhereUsed</ControlName>
+    <Key>cb6062b3-4365-4428-8a8e-afb5d1ccdb31</Key>
+    <PropertyName>Left</PropertyName>
+    <PropertyValue>374</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_WhereUsed</ControlName>
+    <Key>cb6062b3-4365-4428-8a8e-afb5d1ccdb31</Key>
+    <PropertyName>Top</PropertyName>
+    <PropertyValue>247</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_WhereUsed</ControlName>
+    <Key>cb6062b3-4365-4428-8a8e-afb5d1ccdb31</Key>
+    <PropertyName>Text</PropertyName>
+    <PropertyValue>Where Used</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_AffectedWorkorders</ControlName>
+    <Key>3f8f357a-b75e-40c9-b5f1-5daca8d2875d</Key>
+    <PropertyName>ChildIndex</PropertyName>
+    <PropertyValue>2</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_AffectedWorkorders</ControlName>
+    <Key>3f8f357a-b75e-40c9-b5f1-5daca8d2875d</Key>
+    <PropertyName>Parent</PropertyName>
+    <PropertyValue>810241f6-e91e-4112-be62-f77982737f3c</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_AffectedWorkorders</ControlName>
+    <Key>3f8f357a-b75e-40c9-b5f1-5daca8d2875d</Key>
+    <PropertyName>Height</PropertyName>
+    <PropertyValue>281</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_AffectedWorkorders</ControlName>
+    <Key>3f8f357a-b75e-40c9-b5f1-5daca8d2875d</Key>
+    <PropertyName>Width</PropertyName>
+    <PropertyValue>390</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_AffectedWorkorders</ControlName>
+    <Key>3f8f357a-b75e-40c9-b5f1-5daca8d2875d</Key>
+    <PropertyName>Left</PropertyName>
+    <PropertyValue>626</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_AffectedWorkorders</ControlName>
+    <Key>3f8f357a-b75e-40c9-b5f1-5daca8d2875d</Key>
+    <PropertyName>Top</PropertyName>
+    <PropertyValue>247</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_AffectedWorkorders</ControlName>
+    <Key>3f8f357a-b75e-40c9-b5f1-5daca8d2875d</Key>
+    <PropertyName>Text</PropertyName>
+    <PropertyValue>Affected Workorders</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>UD100Form</ControlName>
+    <Key>2dcd1674-5e34-4d98-b493-c75747027376</Key>
+    <PropertyName>Height</PropertyName>
+    <PropertyValue>906</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>UD100Form</ControlName>
+    <Key>2dcd1674-5e34-4d98-b493-c75747027376</Key>
+    <PropertyName>Width</PropertyName>
+    <PropertyValue>1413</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>baseStatusBar</ControlName>
+    <Key>UD100Form.baseStatusBar</Key>
+    <PropertyName>Height</PropertyName>
+    <PropertyValue>20</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>baseStatusBar</ControlName>
+    <Key>UD100Form.baseStatusBar</Key>
+    <PropertyName>Width</PropertyName>
+    <PropertyValue>1453</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>baseStatusBar</ControlName>
+    <Key>UD100Form.baseStatusBar</Key>
+    <PropertyName>Left</PropertyName>
+    <PropertyValue>0</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>baseStatusBar</ControlName>
+    <Key>UD100Form.baseStatusBar</Key>
+    <PropertyName>Top</PropertyName>
+    <PropertyValue>859</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_DispositionInfo</ControlName>
+    <Key>b40036dd-beae-472d-9b90-62a459bfd401</Key>
+    <PropertyName>ChildIndex</PropertyName>
+    <PropertyValue>1</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_DispositionInfo</ControlName>
+    <Key>b40036dd-beae-472d-9b90-62a459bfd401</Key>
+    <PropertyName>Parent</PropertyName>
+    <PropertyValue>810241f6-e91e-4112-be62-f77982737f3c</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_DispositionInfo</ControlName>
+    <Key>b40036dd-beae-472d-9b90-62a459bfd401</Key>
+    <PropertyName>Height</PropertyName>
+    <PropertyValue>192</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_DispositionInfo</ControlName>
+    <Key>b40036dd-beae-472d-9b90-62a459bfd401</Key>
+    <PropertyName>Width</PropertyName>
+    <PropertyValue>297</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_DispositionInfo</ControlName>
+    <Key>b40036dd-beae-472d-9b90-62a459bfd401</Key>
+    <PropertyName>Left</PropertyName>
+    <PropertyValue>1018</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_DispositionInfo</ControlName>
+    <Key>b40036dd-beae-472d-9b90-62a459bfd401</Key>
+    <PropertyName>Top</PropertyName>
+    <PropertyValue>246</PropertyValue>
+    <Company />
+    <Plant />
+    <DcdUserID />
+    <GroupID />
+    <PropertiesID />
+  </Properties>
+  <Properties>
+    <FormsID>UD100Form</FormsID>
+    <ControlName>epiUltraGridC1_DispositionInfo</ControlName>
+    <Key>b40036dd-beae-472d-9b90-62a459bfd401</Key>
+    <PropertyName>Text</PropertyName>
+    <PropertyValue>Disposition Info</PropertyValue>
     <Company />
     <Plant />
     <DcdUserID />
